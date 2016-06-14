@@ -16,6 +16,8 @@
 		17A770161D0F916D00D264F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */; };
 		17A770211D0F916E00D264F1 /* PizzaEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770201D0F916E00D264F1 /* PizzaEmojiTests.m */; };
 		17A7702C1D0F916E00D264F1 /* PizzaEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7702B1D0F916E00D264F1 /* PizzaEmojiUITests.m */; };
+		17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */; };
+		17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7703F1D103BE800D264F1 /* EmojiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		17A770271D0F916E00D264F1 /* PizzaEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A7702B1D0F916E00D264F1 /* PizzaEmojiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaEmojiUITests.m; sourceTree = "<group>"; };
 		17A7702D1D0F916E00D264F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A770391D0FA5BF00D264F1 /* EmojiCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiCollectionViewCell.h; sourceTree = "<group>"; };
+		17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiCollectionViewCell.m; sourceTree = "<group>"; };
+		17A7703E1D103BE800D264F1 /* EmojiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiViewController.h; sourceTree = "<group>"; };
+		17A7703F1D103BE800D264F1 /* EmojiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,9 @@
 			children = (
 				17A770061D0F916D00D264F1 /* AppDelegate.h */,
 				17A770071D0F916D00D264F1 /* AppDelegate.m */,
-				17A770091D0F916D00D264F1 /* ViewController.h */,
-				17A7700A1D0F916D00D264F1 /* ViewController.m */,
 				17A7700C1D0F916D00D264F1 /* Main.storyboard */,
+				17A7703D1D103BBB00D264F1 /* Views */,
+				17A7703C1D103BB000D264F1 /* Cells */,
 				17A770121D0F916D00D264F1 /* Assets.xcassets */,
 				17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */,
 				17A770171D0F916D00D264F1 /* Info.plist */,
@@ -141,6 +147,26 @@
 				17A7702D1D0F916E00D264F1 /* Info.plist */,
 			);
 			path = PizzaEmojiUITests;
+			sourceTree = "<group>";
+		};
+		17A7703C1D103BB000D264F1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17A770391D0FA5BF00D264F1 /* EmojiCollectionViewCell.h */,
+				17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		17A7703D1D103BBB00D264F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17A770091D0F916D00D264F1 /* ViewController.h */,
+				17A7700A1D0F916D00D264F1 /* ViewController.m */,
+				17A7703E1D103BE800D264F1 /* EmojiViewController.h */,
+				17A7703F1D103BE800D264F1 /* EmojiViewController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A7700B1D0F916D00D264F1 /* ViewController.m in Sources */,
+				17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */,
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
+				17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */,
 				17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */,
 				17A770051D0F916D00D264F1 /* main.m in Sources */,
 			);
