@@ -21,7 +21,7 @@
 }
 
 - (IBAction)onShareButtonPressed:(UIButton *)sender {
-     [self shareContent];
+    [self shareContent];
 }
 
 - (IBAction)onXButtonPressed:(UIButton *)sender {

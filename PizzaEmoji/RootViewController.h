@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
+@interface RootViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
 
     IBOutlet UICollectionView *emojiCollectionView;
     IBOutlet UICollectionViewFlowLayout *layout;

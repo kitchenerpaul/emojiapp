@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		17A770051D0F916D00D264F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770041D0F916D00D264F1 /* main.m */; };
 		17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770071D0F916D00D264F1 /* AppDelegate.m */; };
-		17A7700B1D0F916D00D264F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7700A1D0F916D00D264F1 /* ViewController.m */; };
+		17A7700B1D0F916D00D264F1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7700A1D0F916D00D264F1 /* RootViewController.m */; };
 		17A7700E1D0F916D00D264F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A7700C1D0F916D00D264F1 /* Main.storyboard */; };
 		17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17A7700F1D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld */; };
 		17A770131D0F916D00D264F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A770121D0F916D00D264F1 /* Assets.xcassets */; };
@@ -42,8 +42,8 @@
 		17A770041D0F916D00D264F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A770061D0F916D00D264F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17A770071D0F916D00D264F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17A770091D0F916D00D264F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		17A7700A1D0F916D00D264F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		17A770091D0F916D00D264F1 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		17A7700A1D0F916D00D264F1 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		17A7700D1D0F916D00D264F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17A770101D0F916D00D264F1 /* PizzaEmoji.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PizzaEmoji.xcdatamodel; sourceTree = "<group>"; };
 		17A770121D0F916D00D264F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		17A7703D1D103BBB00D264F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				17A770091D0F916D00D264F1 /* ViewController.h */,
-				17A7700A1D0F916D00D264F1 /* ViewController.m */,
+				17A770091D0F916D00D264F1 /* RootViewController.h */,
+				17A7700A1D0F916D00D264F1 /* RootViewController.m */,
 				17A7703E1D103BE800D264F1 /* EmojiViewController.h */,
 				17A7703F1D103BE800D264F1 /* EmojiViewController.m */,
 			);
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A7700B1D0F916D00D264F1 /* ViewController.m in Sources */,
+				17A7700B1D0F916D00D264F1 /* RootViewController.m in Sources */,
 				17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */,
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
 				17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */,
