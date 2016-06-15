@@ -6,9 +6,9 @@
 //  Copyright © 2016 Box Score Games. All rights reserved.
 //
 
-#import "SetttingsTableViewCell.h"
+#import "SettingsTableViewCell.h"
 
-@implementation SetttingsTableViewCell
+@implementation SettingsTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

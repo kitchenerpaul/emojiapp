@@ -22,10 +22,10 @@
 		87243E6E1D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 87243E661D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		87243E741D109D4500E3C1A7 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E731D109D4500E3C1A7 /* Keyboard.xib */; };
 		87243E771D109D6600E3C1A7 /* Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E761D109D6600E3C1A7 /* Keyboard.m */; };
-		87243E7A1D10B06C00E3C1A7 /* SetttingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E791D10B06C00E3C1A7 /* SetttingsViewController.m */; };
+		87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E791D10B06C00E3C1A7 /* SettingsViewController.m */; };
 		87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E7D1D10B29800E3C1A7 /* Settings.m */; };
 		87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */; };
-		87243E841D10FE0500E3C1A7 /* SetttingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SetttingsTableViewCell.m */; };
+		87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */; };
 		87243E871D110C3100E3C1A7 /* InstallKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */; };
 		87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */; };
 		87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */; };
@@ -101,14 +101,14 @@
 		87243E731D109D4500E3C1A7 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
 		87243E751D109D6600E3C1A7 /* Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyboard.h; sourceTree = "<group>"; };
 		87243E761D109D6600E3C1A7 /* Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keyboard.m; sourceTree = "<group>"; };
-		87243E781D10B06C00E3C1A7 /* SetttingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetttingsViewController.h; sourceTree = "<group>"; };
-		87243E791D10B06C00E3C1A7 /* SetttingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetttingsViewController.m; sourceTree = "<group>"; };
+		87243E781D10B06C00E3C1A7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		87243E791D10B06C00E3C1A7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		87243E7C1D10B29800E3C1A7 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		87243E7D1D10B29800E3C1A7 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMyAppViewController.h; sourceTree = "<group>"; };
 		87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMyAppViewController.m; sourceTree = "<group>"; };
-		87243E821D10FE0500E3C1A7 /* SetttingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetttingsTableViewCell.h; sourceTree = "<group>"; };
-		87243E831D10FE0500E3C1A7 /* SetttingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetttingsTableViewCell.m; sourceTree = "<group>"; };
+		87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
+		87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
 		87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallKeyboardViewController.h; sourceTree = "<group>"; };
 		87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallKeyboardViewController.m; sourceTree = "<group>"; };
 		87243E891D110C6B00E3C1A7 /* ShareWithFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWithFriendsViewController.h; sourceTree = "<group>"; };
@@ -159,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				17A770021D0F916D00D264F1 /* PizzaEmoji */,
-				87243E7B1D10B28400E3C1A7 /* Modal */,
 				17A7701F1D0F916E00D264F1 /* PizzaEmojiTests */,
 				17A7702A1D0F916E00D264F1 /* PizzaEmojiUITests */,
 				87243E671D109D3700E3C1A7 /* PizzaEmojiKeyboard */,
@@ -186,6 +185,7 @@
 				17A7700C1D0F916D00D264F1 /* Main.storyboard */,
 				17A7703D1D103BBB00D264F1 /* Views */,
 				17A7703C1D103BB000D264F1 /* Cells */,
+				87243E7B1D10B28400E3C1A7 /* Models */,
 				17A770121D0F916D00D264F1 /* Assets.xcassets */,
 				17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */,
 				17A770171D0F916D00D264F1 /* Info.plist */,
@@ -226,8 +226,8 @@
 			children = (
 				17A770391D0FA5BF00D264F1 /* EmojiCollectionViewCell.h */,
 				17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */,
-				87243E821D10FE0500E3C1A7 /* SetttingsTableViewCell.h */,
-				87243E831D10FE0500E3C1A7 /* SetttingsTableViewCell.m */,
+				87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */,
+				87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 				17A7700A1D0F916D00D264F1 /* RootViewController.m */,
 				17A7703E1D103BE800D264F1 /* EmojiViewController.h */,
 				17A7703F1D103BE800D264F1 /* EmojiViewController.m */,
-				87243E781D10B06C00E3C1A7 /* SetttingsViewController.h */,
-				87243E791D10B06C00E3C1A7 /* SetttingsViewController.m */,
+				87243E781D10B06C00E3C1A7 /* SettingsViewController.h */,
+				87243E791D10B06C00E3C1A7 /* SettingsViewController.m */,
 				87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */,
 				87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */,
 				87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */,
@@ -272,13 +272,14 @@
 			path = PizzaEmojiKeyboard;
 			sourceTree = "<group>";
 		};
-		87243E7B1D10B28400E3C1A7 /* Modal */ = {
+		87243E7B1D10B28400E3C1A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				87243E7C1D10B29800E3C1A7 /* Settings.h */,
 				87243E7D1D10B29800E3C1A7 /* Settings.m */,
 			);
-			name = Modal;
+			name = Models;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +368,7 @@
 				TargetAttributes = {
 					17A76FFF1D0F916D00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 465955C7HD;
+						DevelopmentTeam = 8PYPHDP698;
 					};
 					17A7701B1D0F916E00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -447,7 +448,7 @@
 				87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */,
 				87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */,
 				17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */,
-				87243E7A1D10B06C00E3C1A7 /* SetttingsViewController.m in Sources */,
+				87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */,
 				87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */,
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
 				87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */,
@@ -456,7 +457,7 @@
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
 				87243E871D110C3100E3C1A7 /* InstallKeyboardViewController.m in Sources */,
 				87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */,
-				87243E841D10FE0500E3C1A7 /* SetttingsTableViewCell.m in Sources */,
+				87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */,
 				87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */,
 				17A770051D0F916D00D264F1 /* main.m in Sources */,
 			);
@@ -616,11 +617,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PizzaEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -629,11 +632,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PizzaEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -753,6 +758,7 @@
 				87243E701D109D3700E3C1A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -24,10 +24,6 @@
     [self shareContent];
 }
 
-- (IBAction)onXButtonPressed:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 -(void)shareContent{
 
     NSString *message = @"#PizzaEmojiApp";

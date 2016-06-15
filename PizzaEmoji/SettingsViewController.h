@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetttingsViewController : UIViewController
+@interface SettingsViewController : UIViewController
 
 //- (instancetype)initWithName:(NSString *)name andImage:(UIImage *)iconImageName;
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetttingsTableViewCell : UITableViewCell
+@interface SettingsTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *emojiImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

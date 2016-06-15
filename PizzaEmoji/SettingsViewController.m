@@ -6,17 +6,19 @@
 //  Copyright © 2016 Box Score Games. All rights reserved.
 //
 
-#import "SetttingsViewController.h"
+#import "SettingsViewController.h"
 #import "Settings.h"
 #import "RateMyAppViewController.h"
+#import "SettingsTableViewCell.h"
 
-@interface SetttingsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SettingsViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property NSArray *settings;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation SetttingsViewController
+@implementation SettingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,17 +33,20 @@
 
     self.settings = [NSArray arrayWithObjects:one, two, three, four, five, six, seven, nil];
 
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.settings.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SettingsTableViewCell *settingsCell = [tableView dequeueReusableCellWithIdentifier:@"SettingsCell"];
+    Settings *settings = [self.settings objectAtIndex:indexPath.row];
+    settingsCell.titleLabel.text = settings.name;
+    //    settingsCell.emojiImageView.image = settings.emojiImage;
+    return settingsCell;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,14 +77,16 @@
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SettingsCell"];
-    Settings *settings = [self.settings objectAtIndex:indexPath.row];
-    cell.textLabel.text = settings.name;
-    cell.imageView.image = settings.emojiImage;
-    
-    
-    return cell;
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 
 #pragma mark - Segue
@@ -87,6 +94,9 @@
     
 }
 
+- (IBAction)onBackBarButtonPressed:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"SettingsToRootSegue" sender:self];
+}
 
 
 
