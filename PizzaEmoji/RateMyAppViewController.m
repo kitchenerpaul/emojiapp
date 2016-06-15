@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.apple.com"]];
 }
 
 - (void)didReceiveMemoryWarning {

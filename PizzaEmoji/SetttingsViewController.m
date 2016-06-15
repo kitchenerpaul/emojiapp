@@ -34,11 +34,6 @@
 
 }
 
-
-- (void)arraySettings {
-    
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,6 +42,34 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.settings.count;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 1:
+            [self performSegueWithIdentifier:@"rateMyApp" sender:self];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"installKeyboard" sender:self];
+            break;
+        case 3:
+            [self performSegueWithIdentifier:@"shareWithFriends" sender:self];
+            break;
+        case 4:
+            [self performSegueWithIdentifier:@"contactUs" sender:self];
+            break;
+        case 5:
+            [self performSegueWithIdentifier:@"followUs" sender:self];
+            break;
+        case 6:
+            [self performSegueWithIdentifier:@"winFreePizza" sender:self];
+            break;
+        case 7:
+            [self performSegueWithIdentifier:@"privacyPolicy" sender:self];
+            break;
+        default:
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,15 +84,7 @@
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell{
-    if ([segue.identifier isEqualToString:@"rateMyApp"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        Settings *settings = [self.settings objectAtIndex:indexPath.row];
-        RateMyAppViewController *vc = segue.destinationViewController;
-//        vc.selectedCreature = creature;
-//        vc.creatures = self.creatures;
-//        vc.index = indexPath;
-        
-    }
+    
 }
 
 
