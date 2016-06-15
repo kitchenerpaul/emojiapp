@@ -67,9 +67,9 @@
 - (void)addGesturesToKeyboard {
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode)forControlEvents:UIControlEventTouchUpInside];
     
-//    for (UIButton *key in self.keyboard.keyEmojisArray) {
-//        [key addTarget:self action:@selector(pressKey:) forControlEvents:UIControlEventTouchUpInside];
-//    }
+    for (UIButton *key in self.keyboard.keyEmojisArray) {
+        [key addTarget:self action:@selector(pressKey:) forControlEvents:UIControlEventTouchUpInside];
+    }
 }
 
 - (void)pressKey:(UIButton *)key {

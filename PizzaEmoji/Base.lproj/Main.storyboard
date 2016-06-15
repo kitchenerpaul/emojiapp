@@ -195,101 +195,65 @@
                         <segue destination="t4a-pt-vU8" kind="show" identifier="followUs" id="kzt-XU-eqU"/>
                         <segue destination="vzJ-jT-uiv" kind="show" identifier="winFreePizza" id="Ph9-Vn-UjV"/>
                         <segue destination="bIg-Sj-Oke" kind="show" identifier="rateMyApp" id="bFc-13-Dqy"/>
-                        <segue destination="KFH-hA-pe3" kind="show" identifier="installKeyboard" id="KL5-Pf-C6c"/>
                         <segue destination="5dh-6x-p8c" kind="show" identifier="privacyPolicy" id="15e-yu-d5b"/>
                         <segue destination="Y3T-bH-6LR" kind="show" identifier="SettingsToRootSegue" id="cpu-7U-yXc"/>
+                        <segue destination="tOp-6v-7dw" kind="show" identifier="installKeyboard" id="eoD-7t-VEt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCv-Tb-yun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869" y="175"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="uhM-7l-zos">
+        <!--Page View Controller-->
+        <scene sceneID="H6n-TA-qwm">
             <objects>
-                <viewController id="7lQ-YT-Mat" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0C7-30-1xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController restorationIdentifier="PageContentController" storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Jqv-gf-PZj" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="1934"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="nNp-bf-TBc">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="oIs-jo-Vdo" customClass="PageContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q7c-lz-ynQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="8jx-01-Jec"/>
+                        <viewControllerLayoutGuide type="top" id="eIO-jq-Ssi"/>
+                        <viewControllerLayoutGuide type="bottom" id="U5b-4b-Bu8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yMA-Ma-uUY">
+                    <view key="view" contentMode="scaleToFill" id="B0R-GQ-F6X">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRJ-8F-ez7">
-                                <rect key="frame" x="15" y="109" width="40" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-a6-ywO">
+                                <rect key="frame" x="111" y="84" width="378" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxi-ry-gxL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAK-MM-BTw">
-                                <rect key="frame" x="99" y="153" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nww-8X-JOp">
-                                <rect key="frame" x="15" y="150" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-nW-n6P">
-                                <rect key="frame" x="99" y="194" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="717-Lb-04E">
-                                <rect key="frame" x="15" y="191" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-re-vIh">
-                                <rect key="frame" x="99" y="235" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqe-bc-2ug">
-                                <rect key="frame" x="15" y="232" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6We-RK-Kwb">
-                                <rect key="frame" x="99" y="328" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-Sc-5DM">
-                                <rect key="frame" x="15" y="325" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQ4-2r-aXN">
-                                <rect key="frame" x="99" y="369" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhc-mw-IpV">
-                                <rect key="frame" x="15" y="366" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks4-Vv-A2j">
-                                <rect key="frame" x="99" y="410" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ox-4F-SuS">
-                                <rect key="frame" x="15" y="407" width="40" height="36"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no5-Tg-rgF">
-                                <rect key="frame" x="99" y="112" width="472" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bxi-ry-gxL" firstAttribute="leading" secondItem="B0R-GQ-F6X" secondAttribute="leading" id="0e6-eb-6Cx"/>
+                            <constraint firstItem="9hp-a6-ywO" firstAttribute="centerX" secondItem="bxi-ry-gxL" secondAttribute="centerX" id="3WS-L8-IOQ"/>
+                            <constraint firstItem="9hp-a6-ywO" firstAttribute="leading" secondItem="B0R-GQ-F6X" secondAttribute="leadingMargin" constant="91" id="80t-u8-RuD"/>
+                            <constraint firstItem="bxi-ry-gxL" firstAttribute="bottom" secondItem="U5b-4b-Bu8" secondAttribute="top" id="ZSa-pz-PU6"/>
+                            <constraint firstItem="bxi-ry-gxL" firstAttribute="top" secondItem="B0R-GQ-F6X" secondAttribute="top" id="jZr-7y-lZ3"/>
+                            <constraint firstItem="U5b-4b-Bu8" firstAttribute="top" secondItem="9hp-a6-ywO" secondAttribute="bottom" constant="495" id="kTt-6U-7T2"/>
+                            <constraint firstItem="9hp-a6-ywO" firstAttribute="top" secondItem="eIO-jq-Ssi" secondAttribute="bottom" constant="64" id="oGm-AR-CiW"/>
+                            <constraint firstAttribute="trailing" secondItem="bxi-ry-gxL" secondAttribute="trailing" id="xPf-Kp-VJr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="bxi-ry-gxL" id="nc2-3e-EQw"/>
+                        <outlet property="titleLabel" destination="9hp-a6-ywO" id="ZRI-Qq-jhe"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xbT-4H-oDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQn-af-oAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="175"/>
-        </scene>
-        <!--Install Keyboard View Controller-->
-        <scene sceneID="T4o-is-wi9">
-            <objects>
-                <viewController id="KFH-hA-pe3" customClass="InstallKeyboardViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cfp-d3-BcI"/>
-                        <viewControllerLayoutGuide type="bottom" id="8pM-3Z-vOt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vpG-O6-uYE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cgP-jv-9tX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="204" y="1248"/>
+            <point key="canvasLocation" x="196" y="2624"/>
         </scene>
         <!--Share With Friends View Controller-->
         <scene sceneID="hJL-mv-KCJ">
@@ -413,6 +377,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RN-QI-yRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-500" y="1248"/>
+        </scene>
+        <!--Root Install Keyboard View Controller-->
+        <scene sceneID="pUA-jR-EQ2">
+            <objects>
+                <viewController id="tOp-6v-7dw" customClass="RootInstallKeyboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cN7-l7-Usj"/>
+                        <viewControllerLayoutGuide type="bottom" id="CK4-yy-KC4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Cc-ls-591">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hh-Fa-57b">
+                                <rect key="frame" x="95" y="386" width="411" height="30"/>
+                                <state key="normal" title="Start Again"/>
+                                <connections>
+                                    <action selector="startWalkthrough:" destination="tOp-6v-7dw" eventType="touchUpInside" id="1do-Vl-vQE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qar-Vl-XnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="1260"/>
         </scene>
         <!--Emoji View Controller-->
         <scene sceneID="0KB-bp-ziw">

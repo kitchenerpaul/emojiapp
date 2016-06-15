@@ -26,15 +26,21 @@
 		87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E7D1D10B29800E3C1A7 /* Settings.m */; };
 		87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */; };
 		87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */; };
-		87243E871D110C3100E3C1A7 /* InstallKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */; };
 		87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */; };
 		87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */; };
 		87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E901D110E1800E3C1A7 /* FollowUsViewController.m */; };
 		87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */; };
 		87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */; };
-		87243E9C1D11963D00E3C1A7 /* TutorialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */; };
-		87243E9D1D11963D00E3C1A7 /* TutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */; };
-		87243E9F1D11A3F300E3C1A7 /* InstallKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */; };
+		87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */; };
+		87243EA51D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243EA41D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m */; };
+		87243EB01D11CF5F00E3C1A7 /* png1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 87243EAE1D11CF5F00E3C1A7 /* png1.PNG */; };
+		87243EB11D11CF5F00E3C1A7 /* png2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 87243EAF1D11CF5F00E3C1A7 /* png2.PNG */; };
+		87243EB71D11CF6A00E3C1A7 /* png7.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB21D11CF6A00E3C1A7 /* png7.png */; };
+		87243EB81D11CF6A00E3C1A7 /* png6.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB31D11CF6A00E3C1A7 /* png6.png */; };
+		87243EB91D11CF6A00E3C1A7 /* png5.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB41D11CF6A00E3C1A7 /* png5.png */; };
+		87243EBA1D11CF6A00E3C1A7 /* png3.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB51D11CF6A00E3C1A7 /* png3.png */; };
+		87243EBB1D11CF6A00E3C1A7 /* png4.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB61D11CF6A00E3C1A7 /* png4.png */; };
+		87243EBD1D11CFAE00E3C1A7 /* png8.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EBC1D11CFAE00E3C1A7 /* png8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,8 +118,6 @@
 		87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMyAppViewController.m; sourceTree = "<group>"; };
 		87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
 		87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
-		87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallKeyboardViewController.h; sourceTree = "<group>"; };
-		87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallKeyboardViewController.m; sourceTree = "<group>"; };
 		87243E891D110C6B00E3C1A7 /* ShareWithFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWithFriendsViewController.h; sourceTree = "<group>"; };
 		87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWithFriendsViewController.m; sourceTree = "<group>"; };
 		87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
@@ -124,10 +128,18 @@
 		87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinFreePizzaViewController.m; sourceTree = "<group>"; };
 		87243E951D110E4C00E3C1A7 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
-		87243E991D11963D00E3C1A7 /* TutorialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialChildViewController.h; sourceTree = "<group>"; };
-		87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialChildViewController.m; sourceTree = "<group>"; };
-		87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialChildViewController.xib; sourceTree = "<group>"; };
-		87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstallKeyboard.xib; sourceTree = "<group>"; };
+		87243EA01D11BC2700E3C1A7 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		87243EA31D11BE3800E3C1A7 /* RootInstallKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootInstallKeyboardViewController.h; sourceTree = "<group>"; };
+		87243EA41D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootInstallKeyboardViewController.m; sourceTree = "<group>"; };
+		87243EAE1D11CF5F00E3C1A7 /* png1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png1.PNG; sourceTree = "<group>"; };
+		87243EAF1D11CF5F00E3C1A7 /* png2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png2.PNG; sourceTree = "<group>"; };
+		87243EB21D11CF6A00E3C1A7 /* png7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png7.png; sourceTree = "<group>"; };
+		87243EB31D11CF6A00E3C1A7 /* png6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png6.png; sourceTree = "<group>"; };
+		87243EB41D11CF6A00E3C1A7 /* png5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png5.png; sourceTree = "<group>"; };
+		87243EB51D11CF6A00E3C1A7 /* png3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png3.png; sourceTree = "<group>"; };
+		87243EB61D11CF6A00E3C1A7 /* png4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png4.png; sourceTree = "<group>"; };
+		87243EBC1D11CFAE00E3C1A7 /* png8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png8.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,14 @@
 		17A770031D0F916D00D264F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87243EAE1D11CF5F00E3C1A7 /* png1.PNG */,
+				87243EAF1D11CF5F00E3C1A7 /* png2.PNG */,
+				87243EB51D11CF6A00E3C1A7 /* png3.png */,
+				87243EB61D11CF6A00E3C1A7 /* png4.png */,
+				87243EB41D11CF6A00E3C1A7 /* png5.png */,
+				87243EB31D11CF6A00E3C1A7 /* png6.png */,
+				87243EB21D11CF6A00E3C1A7 /* png7.png */,
+				87243EBC1D11CFAE00E3C1A7 /* png8.png */,
 				17A770041D0F916D00D264F1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -291,12 +311,10 @@
 		87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */,
-				87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */,
-				87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */,
-				87243E991D11963D00E3C1A7 /* TutorialChildViewController.h */,
-				87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */,
-				87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */,
+				87243EA31D11BE3800E3C1A7 /* RootInstallKeyboardViewController.h */,
+				87243EA41D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m */,
+				87243EA01D11BC2700E3C1A7 /* PageContentViewController.h */,
+				87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */,
 			);
 			name = InstallKeyboardTutorial;
 			sourceTree = "<group>";
@@ -387,7 +405,7 @@
 				TargetAttributes = {
 					17A76FFF1D0F916D00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8PYPHDP698;
+						DevelopmentTeam = 465955C7HD;
 					};
 					17A7701B1D0F916E00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -428,11 +446,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87243E9F1D11A3F300E3C1A7 /* InstallKeyboard.xib in Resources */,
 				17A770161D0F916D00D264F1 /* LaunchScreen.storyboard in Resources */,
+				87243EB01D11CF5F00E3C1A7 /* png1.PNG in Resources */,
+				87243EBA1D11CF6A00E3C1A7 /* png3.png in Resources */,
 				17A770131D0F916D00D264F1 /* Assets.xcassets in Resources */,
+				87243EB81D11CF6A00E3C1A7 /* png6.png in Resources */,
+				87243EB11D11CF5F00E3C1A7 /* png2.PNG in Resources */,
+				87243EBB1D11CF6A00E3C1A7 /* png4.png in Resources */,
+				87243EB91D11CF6A00E3C1A7 /* png5.png in Resources */,
 				17A7700E1D0F916D00D264F1 /* Main.storyboard in Resources */,
-				87243E9D1D11963D00E3C1A7 /* TutorialChildViewController.xib in Resources */,
+				87243EB71D11CF6A00E3C1A7 /* png7.png in Resources */,
+				87243EBD1D11CFAE00E3C1A7 /* png8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,11 +497,11 @@
 				87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */,
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
 				87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */,
+				87243EA51D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m in Sources */,
 				17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */,
-				87243E9C1D11963D00E3C1A7 /* TutorialChildViewController.m in Sources */,
 				17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */,
+				87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */,
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
-				87243E871D110C3100E3C1A7 /* InstallKeyboardViewController.m in Sources */,
 				87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */,
 				87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */,
 				87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */,
