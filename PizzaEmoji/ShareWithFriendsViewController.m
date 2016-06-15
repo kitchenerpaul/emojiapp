@@ -27,9 +27,8 @@
 -(void)shareContent{
     
     NSString *message = @"#PizzaEmojiApp";
-    UIImage *image = self.emoji;
     
-    NSArray *shareItems = @[message, image];
+    NSArray *shareItems = @[message];
     
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     

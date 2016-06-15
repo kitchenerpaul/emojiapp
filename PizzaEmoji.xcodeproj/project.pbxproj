@@ -32,6 +32,9 @@
 		87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E901D110E1800E3C1A7 /* FollowUsViewController.m */; };
 		87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */; };
 		87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */; };
+		87243E9C1D11963D00E3C1A7 /* TutorialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */; };
+		87243E9D1D11963D00E3C1A7 /* TutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */; };
+		87243E9F1D11A3F300E3C1A7 /* InstallKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,10 @@
 		87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinFreePizzaViewController.m; sourceTree = "<group>"; };
 		87243E951D110E4C00E3C1A7 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		87243E991D11963D00E3C1A7 /* TutorialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialChildViewController.h; sourceTree = "<group>"; };
+		87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialChildViewController.m; sourceTree = "<group>"; };
+		87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialChildViewController.xib; sourceTree = "<group>"; };
+		87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstallKeyboard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,8 +250,7 @@
 				87243E791D10B06C00E3C1A7 /* SettingsViewController.m */,
 				87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */,
 				87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */,
-				87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */,
-				87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */,
+				87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */,
 				87243E891D110C6B00E3C1A7 /* ShareWithFriendsViewController.h */,
 				87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */,
 				87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */,
@@ -280,6 +286,19 @@
 			);
 			name = Models;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				87243E851D110C3100E3C1A7 /* InstallKeyboardViewController.h */,
+				87243E861D110C3100E3C1A7 /* InstallKeyboardViewController.m */,
+				87243E9E1D11A3F300E3C1A7 /* InstallKeyboard.xib */,
+				87243E991D11963D00E3C1A7 /* TutorialChildViewController.h */,
+				87243E9A1D11963D00E3C1A7 /* TutorialChildViewController.m */,
+				87243E9B1D11963D00E3C1A7 /* TutorialChildViewController.xib */,
+			);
+			name = InstallKeyboardTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,9 +428,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87243E9F1D11A3F300E3C1A7 /* InstallKeyboard.xib in Resources */,
 				17A770161D0F916D00D264F1 /* LaunchScreen.storyboard in Resources */,
 				17A770131D0F916D00D264F1 /* Assets.xcassets in Resources */,
 				17A7700E1D0F916D00D264F1 /* Main.storyboard in Resources */,
+				87243E9D1D11963D00E3C1A7 /* TutorialChildViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +474,7 @@
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
 				87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */,
 				17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */,
+				87243E9C1D11963D00E3C1A7 /* TutorialChildViewController.m in Sources */,
 				17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */,
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
 				87243E871D110C3100E3C1A7 /* InstallKeyboardViewController.m in Sources */,

@@ -51,26 +51,33 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
-        case 1:
+        case 0:
             [self performSegueWithIdentifier:@"rateMyApp" sender:self];
+            NSLog(@"ratemyApp pressed");
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"installKeyboard" sender:self];
+            NSLog(@"installKeyboard pressed");
             break;
         case 2:
-            [self performSegueWithIdentifier:@"installKeyboard" sender:self];
+            [self performSegueWithIdentifier:@"shareWithFriends" sender:self];
+            NSLog(@"shareWithFriends pressed");
             break;
         case 3:
-            [self performSegueWithIdentifier:@"shareWithFriends" sender:self];
+            [self performSegueWithIdentifier:@"contactUs" sender:self];
+            NSLog(@"ratemyApp pressed");
             break;
         case 4:
-            [self performSegueWithIdentifier:@"contactUs" sender:self];
+            [self performSegueWithIdentifier:@"followUs" sender:self];
+            NSLog(@"followUs pressed");
             break;
         case 5:
-            [self performSegueWithIdentifier:@"followUs" sender:self];
+            [self performSegueWithIdentifier:@"winFreePizza" sender:self];
+            NSLog(@"winFreePizza pressed");
             break;
         case 6:
-            [self performSegueWithIdentifier:@"winFreePizza" sender:self];
-            break;
-        case 7:
             [self performSegueWithIdentifier:@"privacyPolicy" sender:self];
+            NSLog(@"privacyPolicy pressed");
             break;
         default:
             break;
