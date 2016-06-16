@@ -35,6 +35,11 @@
     for (int i = 0; i < 30; i++) {
         [emojis addObject:[UIImage imageNamed:@"skull"]];
     }
+
+    // Set navigation bar to a red color
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:55/255.2f  blue:33/255.2f  alpha:1]];
+    // Set navigation bar title color to white
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
 #pragma mark UICollectionView DataSource
@@ -44,6 +49,7 @@
     EmojiCollectionViewCell *emojiCell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"EmojiCellID" forIndexPath:indexPath];
     emojiCell.emojiImageView.image = [emojis objectAtIndex:indexPath.row];
     return emojiCell;
+
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -61,7 +67,7 @@
 
 -(CGFloat) calcCellWidth :(CGSize) size {
 
-    float cellWidth = size.width/4;
+    float cellWidth = size.width/3;
     return cellWidth;
 }
 

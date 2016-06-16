@@ -18,12 +18,12 @@
 		17A7702C1D0F916E00D264F1 /* PizzaEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7702B1D0F916E00D264F1 /* PizzaEmojiUITests.m */; };
 		17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */; };
 		17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7703F1D103BE800D264F1 /* EmojiViewController.m */; };
+		17A770481D126C0700D264F1 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770471D126C0700D264F1 /* TutorialViewController.m */; };
 		87243E6A1D109D3700E3C1A7 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E691D109D3700E3C1A7 /* KeyboardViewController.m */; };
 		87243E6E1D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 87243E661D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		87243E741D109D4500E3C1A7 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E731D109D4500E3C1A7 /* Keyboard.xib */; };
 		87243E771D109D6600E3C1A7 /* Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E761D109D6600E3C1A7 /* Keyboard.m */; };
 		87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E791D10B06C00E3C1A7 /* SettingsViewController.m */; };
-		87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E7D1D10B29800E3C1A7 /* Settings.m */; };
 		87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */; };
 		87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */; };
 		87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */; };
@@ -33,14 +33,6 @@
 		87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */; };
 		87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */; };
 		87243EA51D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243EA41D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m */; };
-		87243EB01D11CF5F00E3C1A7 /* png1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 87243EAE1D11CF5F00E3C1A7 /* png1.PNG */; };
-		87243EB11D11CF5F00E3C1A7 /* png2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 87243EAF1D11CF5F00E3C1A7 /* png2.PNG */; };
-		87243EB71D11CF6A00E3C1A7 /* png7.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB21D11CF6A00E3C1A7 /* png7.png */; };
-		87243EB81D11CF6A00E3C1A7 /* png6.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB31D11CF6A00E3C1A7 /* png6.png */; };
-		87243EB91D11CF6A00E3C1A7 /* png5.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB41D11CF6A00E3C1A7 /* png5.png */; };
-		87243EBA1D11CF6A00E3C1A7 /* png3.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB51D11CF6A00E3C1A7 /* png3.png */; };
-		87243EBB1D11CF6A00E3C1A7 /* png4.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EB61D11CF6A00E3C1A7 /* png4.png */; };
-		87243EBD1D11CFAE00E3C1A7 /* png8.png in Resources */ = {isa = PBXBuildFile; fileRef = 87243EBC1D11CFAE00E3C1A7 /* png8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +95,8 @@
 		17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiCollectionViewCell.m; sourceTree = "<group>"; };
 		17A7703E1D103BE800D264F1 /* EmojiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiViewController.h; sourceTree = "<group>"; };
 		17A7703F1D103BE800D264F1 /* EmojiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiViewController.m; sourceTree = "<group>"; };
+		17A770461D126C0700D264F1 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		17A770471D126C0700D264F1 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		87243E661D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PizzaEmojiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		87243E681D109D3700E3C1A7 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
 		87243E691D109D3700E3C1A7 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
@@ -112,8 +106,6 @@
 		87243E761D109D6600E3C1A7 /* Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keyboard.m; sourceTree = "<group>"; };
 		87243E781D10B06C00E3C1A7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		87243E791D10B06C00E3C1A7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		87243E7C1D10B29800E3C1A7 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		87243E7D1D10B29800E3C1A7 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMyAppViewController.h; sourceTree = "<group>"; };
 		87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMyAppViewController.m; sourceTree = "<group>"; };
 		87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
@@ -132,14 +124,6 @@
 		87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		87243EA31D11BE3800E3C1A7 /* RootInstallKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootInstallKeyboardViewController.h; sourceTree = "<group>"; };
 		87243EA41D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootInstallKeyboardViewController.m; sourceTree = "<group>"; };
-		87243EAE1D11CF5F00E3C1A7 /* png1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png1.PNG; sourceTree = "<group>"; };
-		87243EAF1D11CF5F00E3C1A7 /* png2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png2.PNG; sourceTree = "<group>"; };
-		87243EB21D11CF6A00E3C1A7 /* png7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png7.png; sourceTree = "<group>"; };
-		87243EB31D11CF6A00E3C1A7 /* png6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png6.png; sourceTree = "<group>"; };
-		87243EB41D11CF6A00E3C1A7 /* png5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png5.png; sourceTree = "<group>"; };
-		87243EB51D11CF6A00E3C1A7 /* png3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png3.png; sourceTree = "<group>"; };
-		87243EB61D11CF6A00E3C1A7 /* png4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png4.png; sourceTree = "<group>"; };
-		87243EBC1D11CFAE00E3C1A7 /* png8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png8.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,14 +201,6 @@
 		17A770031D0F916D00D264F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				87243EAE1D11CF5F00E3C1A7 /* png1.PNG */,
-				87243EAF1D11CF5F00E3C1A7 /* png2.PNG */,
-				87243EB51D11CF6A00E3C1A7 /* png3.png */,
-				87243EB61D11CF6A00E3C1A7 /* png4.png */,
-				87243EB41D11CF6A00E3C1A7 /* png5.png */,
-				87243EB31D11CF6A00E3C1A7 /* png6.png */,
-				87243EB21D11CF6A00E3C1A7 /* png7.png */,
-				87243EBC1D11CFAE00E3C1A7 /* png8.png */,
 				17A770041D0F916D00D264F1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -268,6 +244,8 @@
 				17A7703F1D103BE800D264F1 /* EmojiViewController.m */,
 				87243E781D10B06C00E3C1A7 /* SettingsViewController.h */,
 				87243E791D10B06C00E3C1A7 /* SettingsViewController.m */,
+				17A770461D126C0700D264F1 /* TutorialViewController.h */,
+				17A770471D126C0700D264F1 /* TutorialViewController.m */,
 				87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */,
 				87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */,
 				87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */,
@@ -301,8 +279,6 @@
 		87243E7B1D10B28400E3C1A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				87243E7C1D10B29800E3C1A7 /* Settings.h */,
-				87243E7D1D10B29800E3C1A7 /* Settings.m */,
 			);
 			name = Models;
 			path = ..;
@@ -405,7 +381,7 @@
 				TargetAttributes = {
 					17A76FFF1D0F916D00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 465955C7HD;
+						DevelopmentTeam = 8PYPHDP698;
 					};
 					17A7701B1D0F916E00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -447,16 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A770161D0F916D00D264F1 /* LaunchScreen.storyboard in Resources */,
-				87243EB01D11CF5F00E3C1A7 /* png1.PNG in Resources */,
-				87243EBA1D11CF6A00E3C1A7 /* png3.png in Resources */,
 				17A770131D0F916D00D264F1 /* Assets.xcassets in Resources */,
-				87243EB81D11CF6A00E3C1A7 /* png6.png in Resources */,
-				87243EB11D11CF5F00E3C1A7 /* png2.PNG in Resources */,
-				87243EBB1D11CF6A00E3C1A7 /* png4.png in Resources */,
-				87243EB91D11CF6A00E3C1A7 /* png5.png in Resources */,
 				17A7700E1D0F916D00D264F1 /* Main.storyboard in Resources */,
-				87243EB71D11CF6A00E3C1A7 /* png7.png in Resources */,
-				87243EBD1D11CFAE00E3C1A7 /* png8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +459,7 @@
 			files = (
 				17A7700B1D0F916D00D264F1 /* RootViewController.m in Sources */,
 				87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */,
+				17A770481D126C0700D264F1 /* TutorialViewController.m in Sources */,
 				87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */,
 				17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */,
 				87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */,
@@ -504,7 +473,6 @@
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
 				87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */,
 				87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */,
-				87243E7E1D10B29800E3C1A7 /* Settings.m in Sources */,
 				17A770051D0F916D00D264F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

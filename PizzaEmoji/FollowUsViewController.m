@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.instagram.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.instagram.com/boxscoregames/"]];
 
 
 }

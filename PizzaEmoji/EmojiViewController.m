@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     self.emojiImageView.image = self.emoji;
+    self.shareButton.layer.cornerRadius = 5;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (IBAction)onShareButtonPressed:(UIButton *)sender {
@@ -28,11 +30,8 @@
 
     NSString *message = @"#PizzaEmojiApp";
     UIImage *image = self.emoji;
-
     NSArray *shareItems = @[message, image];
-
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
-
     [self presentViewController:avc animated:YES completion:nil];
 }
 

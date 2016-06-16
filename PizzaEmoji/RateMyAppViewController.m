@@ -19,9 +19,6 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.apple.com"]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

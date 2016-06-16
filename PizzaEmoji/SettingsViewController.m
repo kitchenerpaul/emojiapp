@@ -7,13 +7,12 @@
 //
 
 #import "SettingsViewController.h"
-#import "Settings.h"
 #import "RateMyAppViewController.h"
 #import "SettingsTableViewCell.h"
 
 @interface SettingsViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property NSArray *settings;
+@property NSArray *settingsTitles;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -22,65 +21,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    Settings *one = [[Settings alloc] initWithName:@"Rate App" andImage:[UIImage imageNamed:@"default"]];
-    Settings *two = [[Settings alloc] initWithName:@"Install Keyboard" andImage:[UIImage imageNamed:@"default"]];
-    Settings *three = [[Settings alloc] initWithName:@"Share With Friends" andImage:[UIImage imageNamed:@"default"]];
-    Settings *four = [[Settings alloc] initWithName:@"Contact Us" andImage:[UIImage imageNamed:@"default"]];
-    Settings *five = [[Settings alloc] initWithName:@"Follow Us" andImage:[UIImage imageNamed:@"default"]];
-    Settings *six = [[Settings alloc] initWithName:@"WIN FREE PIZZA" andImage:[UIImage imageNamed:@"default"]];
-    Settings *seven = [[Settings alloc] initWithName:@"Privacy Policy" andImage:[UIImage imageNamed:@"default"]];
 
-    self.settings = [NSArray arrayWithObjects:one, two, three, four, five, six, seven, nil];
+    // Set navigation bar colors
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:55/255.2f  blue:33/255.2f  alpha:1]];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.settingsTitles = [[NSArray alloc] initWithObjects:@"Rate the App", @"Install Keyboard", @"Share with Friends", @"Follow Us!", nil];
+
+//    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.settings.count;
+    return self.settingsTitles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SettingsTableViewCell *settingsCell = [tableView dequeueReusableCellWithIdentifier:@"SettingsCell"];
-    Settings *settings = [self.settings objectAtIndex:indexPath.row];
-    settingsCell.titleLabel.text = settings.name;
+    SettingsTableViewCell *settingsCell = [tableView dequeueReusableCellWithIdentifier:@"SettingsCellID" forIndexPath:indexPath];
+    settingsCell.titleLabel.text = [self.settingsTitles objectAtIndex:indexPath.row];
     return settingsCell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case 1:
-            [self performSegueWithIdentifier:@"rateMyApp" sender:self];
-            NSLog(@"ratemyApp pressed");
-            break;
-        case 2:
-            [self performSegueWithIdentifier:@"installKeyboard" sender:self];
-            NSLog(@"installKeyboard pressed");
-            break;
-        case 3:
-            [self performSegueWithIdentifier:@"shareWithFriends" sender:self];
-            NSLog(@"shareWithFriends pressed");
-            break;
-        case 4:
-            [self performSegueWithIdentifier:@"contactUs" sender:self];
-            NSLog(@"ratemyApp pressed");
-            break;
-        case 5:
-            [self performSegueWithIdentifier:@"followUs" sender:self];
-            NSLog(@"followUs pressed");
-            break;
-        case 6:
-            [self performSegueWithIdentifier:@"winFreePizza" sender:self];
-            NSLog(@"winFreePizza pressed");
-            break;
-        case 7:
-            [self performSegueWithIdentifier:@"privacyPolicy" sender:self];
-            NSLog(@"privacyPolicy pressed");
-            break;
-        default:
-            break;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"RateMyAppSegue" sender:self];
+    } else if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
+    } else if (indexPath.row == 2) {
+        [self performSegueWithIdentifier:@"ShareWithFriendsSegue" sender:self];
+    } else if (indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"FollowUsSegue" sender:self];
     }
+
+}
+
+- (IBAction)onWinFreePizzaButtonPressed:(UIButton *)sender {
+
+    [self performSegueWithIdentifier:@"WinFreePizzaSegue" sender:self];
+
+}
+
+- (IBAction)onPrivacyPolicyButtonPressed:(UIButton *)sender {
+
+    [self performSegueWithIdentifier:@"PrivacyPolicySegue" sender:self];
+
+}
+
+- (IBAction)onContactButtonPressed:(UIButton *)sender {
+
+    [self performSegueWithIdentifier:@"ContactUsSegue" sender:self];
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -10,6 +10,4 @@
 
 @interface SettingsViewController : UIViewController
 
-//- (instancetype)initWithName:(NSString *)name andImage:(UIImage *)iconImageName;
-
 @end

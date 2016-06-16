@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *emojiImageView;
 @property UIImage *emoji;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
