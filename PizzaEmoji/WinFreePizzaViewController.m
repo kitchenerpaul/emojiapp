@@ -10,16 +10,20 @@
 
 @interface WinFreePizzaViewController ()
 
+@property (strong, nonatomic) IBOutlet UIButton *getAppButton;
+
 @end
 
 @implementation WinFreePizzaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://itunes.apple.com/us/app/box-score-fantasy-pizza/id696243799?mt=8"]];
 
-
+    self.getAppButton.layer.cornerRadius = 5;
 }
 
+- (IBAction)onGetAppButtonPressed:(UIButton *)sender {
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://itunes.apple.com/us/app/box-score-fantasy-pizza/id696243799?mt=8"]];
+}
 @end

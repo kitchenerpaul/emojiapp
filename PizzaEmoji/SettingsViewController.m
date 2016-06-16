@@ -7,7 +7,6 @@
 //
 
 #import "SettingsViewController.h"
-#import "RateMyAppViewController.h"
 #import "SettingsTableViewCell.h"
 
 @interface SettingsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -28,8 +27,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
     self.settingsTitles = [[NSArray alloc] initWithObjects:@"Rate the App", @"Install Keyboard", @"Share with Friends", @"Follow Us!", nil];
-
-//    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - UITableViewDataSource
@@ -45,16 +42,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"RateMyAppSegue" sender:self];
-    } else if (indexPath.row == 1) {
-        [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
-    } else if (indexPath.row == 2) {
-        [self performSegueWithIdentifier:@"ShareWithFriendsSegue" sender:self];
-    } else if (indexPath.row == 3) {
-        [self performSegueWithIdentifier:@"FollowUsSegue" sender:self];
-    }
-
+        if (indexPath.row == 0) {
+            //Rate the App
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.apple.com"]];
+        } else if (indexPath.row == 1) {
+            //Install Keyboard Tutorial
+            [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
+        } else if (indexPath.row == 2) {
+            //Share with Friends
+            [self shareContent];
+        } else if (indexPath.row == 3) {
+            //Follow Us
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.instagram.com/boxscoregames/"]];
+        }
 }
 
 - (IBAction)onWinFreePizzaButtonPressed:(UIButton *)sender {
@@ -74,6 +74,7 @@
     [self performSegueWithIdentifier:@"ContactUsSegue" sender:self];
 }
 
+// Allows separator lines to extend full width of view
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -86,15 +87,18 @@
     }
 }
 
+-(void)shareContent{
+
+    NSString *message = @"Get the glorious combination of pizza and emojis here:\nhttp://boxscoregames.com\n\n#PizzaEmojiApp";
+    UIImage *emojiImage = [UIImage imageNamed:@"skull"];
+    NSArray *shareItems = [[NSArray alloc]initWithObjects:emojiImage, message, nil];
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
+    [self presentViewController:avc animated:YES completion:nil];
+}
+
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell{
-    
+
 }
-
-- (IBAction)onBackBarButtonPressed:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"SettingsToRootSegue" sender:self];
-}
-
-
 
 @end

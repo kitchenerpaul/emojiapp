@@ -24,11 +24,8 @@
 		87243E741D109D4500E3C1A7 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87243E731D109D4500E3C1A7 /* Keyboard.xib */; };
 		87243E771D109D6600E3C1A7 /* Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E761D109D6600E3C1A7 /* Keyboard.m */; };
 		87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E791D10B06C00E3C1A7 /* SettingsViewController.m */; };
-		87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */; };
 		87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */; };
-		87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */; };
 		87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */; };
-		87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E901D110E1800E3C1A7 /* FollowUsViewController.m */; };
 		87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */; };
 		87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */; };
 		87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */; };
@@ -106,16 +103,10 @@
 		87243E761D109D6600E3C1A7 /* Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keyboard.m; sourceTree = "<group>"; };
 		87243E781D10B06C00E3C1A7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		87243E791D10B06C00E3C1A7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMyAppViewController.h; sourceTree = "<group>"; };
-		87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMyAppViewController.m; sourceTree = "<group>"; };
 		87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
 		87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
-		87243E891D110C6B00E3C1A7 /* ShareWithFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWithFriendsViewController.h; sourceTree = "<group>"; };
-		87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWithFriendsViewController.m; sourceTree = "<group>"; };
 		87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
-		87243E8F1D110E1800E3C1A7 /* FollowUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowUsViewController.h; sourceTree = "<group>"; };
-		87243E901D110E1800E3C1A7 /* FollowUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowUsViewController.m; sourceTree = "<group>"; };
 		87243E921D110E3E00E3C1A7 /* WinFreePizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinFreePizzaViewController.h; sourceTree = "<group>"; };
 		87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinFreePizzaViewController.m; sourceTree = "<group>"; };
 		87243E951D110E4C00E3C1A7 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
@@ -189,10 +180,6 @@
 				17A7703D1D103BBB00D264F1 /* Views */,
 				17A7703C1D103BB000D264F1 /* Cells */,
 				87243E7B1D10B28400E3C1A7 /* Models */,
-				17A770121D0F916D00D264F1 /* Assets.xcassets */,
-				17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */,
-				17A770171D0F916D00D264F1 /* Info.plist */,
-				17A7700F1D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld */,
 				17A770031D0F916D00D264F1 /* Supporting Files */,
 			);
 			path = PizzaEmoji;
@@ -201,7 +188,12 @@
 		17A770031D0F916D00D264F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17A770121D0F916D00D264F1 /* Assets.xcassets */,
+				17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */,
+				17A770171D0F916D00D264F1 /* Info.plist */,
+				17A7700F1D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld */,
 				17A770041D0F916D00D264F1 /* main.m */,
+				87243E981D11921600E3C1A7 /* InstallKeyboardTutorial-Swipe */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -246,17 +238,10 @@
 				87243E791D10B06C00E3C1A7 /* SettingsViewController.m */,
 				17A770461D126C0700D264F1 /* TutorialViewController.h */,
 				17A770471D126C0700D264F1 /* TutorialViewController.m */,
-				87243E7F1D10C1BA00E3C1A7 /* RateMyAppViewController.h */,
-				87243E801D10C1BA00E3C1A7 /* RateMyAppViewController.m */,
-				87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */,
-				87243E891D110C6B00E3C1A7 /* ShareWithFriendsViewController.h */,
-				87243E8A1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m */,
-				87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */,
-				87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */,
-				87243E8F1D110E1800E3C1A7 /* FollowUsViewController.h */,
-				87243E901D110E1800E3C1A7 /* FollowUsViewController.m */,
 				87243E921D110E3E00E3C1A7 /* WinFreePizzaViewController.h */,
 				87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */,
+				87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */,
+				87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */,
 				87243E951D110E4C00E3C1A7 /* PrivacyPolicyViewController.h */,
 				87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */,
 			);
@@ -284,7 +269,7 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		87243E981D11921600E3C1A7 /* InstallKeyboardTutorial */ = {
+		87243E981D11921600E3C1A7 /* InstallKeyboardTutorial-Swipe */ = {
 			isa = PBXGroup;
 			children = (
 				87243EA31D11BE3800E3C1A7 /* RootInstallKeyboardViewController.h */,
@@ -292,7 +277,7 @@
 				87243EA01D11BC2700E3C1A7 /* PageContentViewController.h */,
 				87243EA11D11BC2700E3C1A7 /* PageContentViewController.m */,
 			);
-			name = InstallKeyboardTutorial;
+			name = "InstallKeyboardTutorial-Swipe";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,20 +443,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A7700B1D0F916D00D264F1 /* RootViewController.m in Sources */,
-				87243E811D10C1BA00E3C1A7 /* RateMyAppViewController.m in Sources */,
 				17A770481D126C0700D264F1 /* TutorialViewController.m in Sources */,
 				87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */,
 				17A7703B1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m in Sources */,
 				87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */,
 				87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */,
 				17A770111D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld in Sources */,
-				87243E911D110E1800E3C1A7 /* FollowUsViewController.m in Sources */,
 				87243EA51D11BE3800E3C1A7 /* RootInstallKeyboardViewController.m in Sources */,
 				17A770401D103BE800D264F1 /* EmojiViewController.m in Sources */,
 				17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */,
 				87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */,
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
-				87243E8B1D110C6B00E3C1A7 /* ShareWithFriendsViewController.m in Sources */,
 				87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */,
 				17A770051D0F916D00D264F1 /* main.m in Sources */,
 			);

@@ -78,7 +78,7 @@
                         <barButtonItem key="rightBarButtonItem" image="settings_nav" id="dLy-5r-vap">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="dLG-gK-1b7" kind="show" id="3xd-zi-Tz5"/>
+                                <segue destination="qbv-yx-xyj" kind="show" id="NgL-Ue-hBb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -220,28 +220,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="NKm-fu-8t2">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; PizzaEmoji" id="BEl-g0-IjQ">
-                            <connections>
-                                <action selector="onBackBarButtonPressed:" destination="qbv-yx-xyj" id="IyT-fu-R3C"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="NKm-fu-8t2"/>
                     <connections>
                         <outlet property="tableView" destination="zDb-OF-Wa7" id="LER-EK-m6A"/>
-                        <segue destination="an0-rw-n96" kind="show" identifier="ShareWithFriendsSegue" id="exx-mM-fdf"/>
                         <segue destination="GZ2-P0-MRV" kind="show" identifier="ContactUsSegue" id="CPb-1l-OM5"/>
-                        <segue destination="t4a-pt-vU8" kind="show" identifier="FollowUsSegue" id="kzt-XU-eqU"/>
                         <segue destination="vzJ-jT-uiv" kind="show" identifier="WinFreePizzaSegue" id="Ph9-Vn-UjV"/>
-                        <segue destination="bIg-Sj-Oke" kind="show" identifier="RateMyAppSegue" id="bFc-13-Dqy"/>
                         <segue destination="5dh-6x-p8c" kind="show" identifier="PrivacyPolicySegue" id="15e-yu-d5b"/>
-                        <segue destination="Y3T-bH-6LR" kind="show" identifier="SettingsToRootSegue" id="cpu-7U-yXc"/>
                         <segue destination="LbE-gr-uKW" kind="show" identifier="SettingsToTutorialSegue" id="i3A-qn-yKE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCv-Tb-yun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869" y="175"/>
+            <point key="canvasLocation" x="1869" y="-621"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="H6n-TA-qwm">
@@ -263,15 +253,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxi-ry-gxL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-a6-ywO">
                                 <rect key="frame" x="111" y="84" width="378" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxi-ry-gxL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -354,24 +344,6 @@
             </objects>
             <point key="canvasLocation" x="232" y="1248"/>
         </scene>
-        <!--Share With Friends View Controller-->
-        <scene sceneID="hJL-mv-KCJ">
-            <objects>
-                <viewController id="an0-rw-n96" customClass="ShareWithFriendsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kUd-i7-enO"/>
-                        <viewControllerLayoutGuide type="bottom" id="HV5-4U-ubu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BNz-MK-u78">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B7a-s8-Ja1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="1248"/>
-        </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="INX-l6-ODt">
             <objects>
@@ -390,24 +362,6 @@
             </objects>
             <point key="canvasLocation" x="1686" y="1248"/>
         </scene>
-        <!--Follow Us View Controller-->
-        <scene sceneID="rQr-5F-L5g">
-            <objects>
-                <viewController id="t4a-pt-vU8" customClass="FollowUsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VYs-kk-UMc"/>
-                        <viewControllerLayoutGuide type="bottom" id="XlB-RV-X1e"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qFY-dU-dGY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NAy-Ak-ST4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2404" y="1248"/>
-        </scene>
         <!--Win Free Pizza View Controller-->
         <scene sceneID="gmI-Mr-5Jv">
             <objects>
@@ -419,8 +373,53 @@
                     <view key="view" contentMode="scaleToFill" id="oOc-gW-3zb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasypizza" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-O2-rDU">
+                                <rect key="frame" x="0.0" y="94" width="600" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1EC-Gt-kRD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fantasy Pizza is the best game to play while watching sports. It's super easy to play, and it's FREE!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhb-Mh-JOv">
+                                <rect key="frame" x="25" y="364" width="550" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cA2-DE-Y4E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYz-hQ-OJo">
+                                <rect key="frame" x="225" y="449" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0d1-jC-Sgb"/>
+                                    <constraint firstAttribute="height" constant="40" id="uIW-L0-rQI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GET THE APP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGetAppButtonPressed:" destination="vzJ-jT-uiv" eventType="touchUpInside" id="IJd-9p-nvo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xhb-Mh-JOv" firstAttribute="top" secondItem="jAO-O2-rDU" secondAttribute="bottom" constant="20" id="6yO-7e-fNY"/>
+                            <constraint firstItem="xhb-Mh-JOv" firstAttribute="leading" secondItem="oOc-gW-3zb" secondAttribute="leading" constant="25" id="Au4-R8-C0d"/>
+                            <constraint firstItem="jAO-O2-rDU" firstAttribute="leading" secondItem="oOc-gW-3zb" secondAttribute="leading" id="Brv-Uv-wgE"/>
+                            <constraint firstAttribute="trailing" secondItem="jAO-O2-rDU" secondAttribute="trailing" id="DLV-zx-CYo"/>
+                            <constraint firstAttribute="trailing" secondItem="xhb-Mh-JOv" secondAttribute="trailing" constant="25" id="Fa4-XK-sjY"/>
+                            <constraint firstItem="fYz-hQ-OJo" firstAttribute="centerX" secondItem="oOc-gW-3zb" secondAttribute="centerX" id="dBr-OR-1sx"/>
+                            <constraint firstItem="jAO-O2-rDU" firstAttribute="top" secondItem="Boh-72-jQz" secondAttribute="bottom" constant="30" id="par-mV-TdJ"/>
+                            <constraint firstItem="fYz-hQ-OJo" firstAttribute="top" secondItem="xhb-Mh-JOv" secondAttribute="bottom" constant="25" id="qVg-MZ-4nO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getAppButton" destination="fYz-hQ-OJo" id="8a1-l0-AuG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoB-KV-JEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,24 +457,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgL-Lu-lO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3800" y="1248"/>
-        </scene>
-        <!--Rate My App View Controller-->
-        <scene sceneID="ddN-2c-WGC">
-            <objects>
-                <viewController id="bIg-Sj-Oke" customClass="RateMyAppViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gzi-oP-f74"/>
-                        <viewControllerLayoutGuide type="bottom" id="gn4-Mh-siv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zwu-4B-lun">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3RN-QI-yRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-500" y="1248"/>
         </scene>
         <!--Root Install Keyboard View Controller-->
         <scene sceneID="pUA-jR-EQ2">
@@ -582,26 +563,9 @@
             </objects>
             <point key="canvasLocation" x="1145" y="-1335"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="uN0-BS-sQ4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dLG-gK-1b7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oUA-5e-a1J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qbv-yx-xyj" kind="relationship" relationship="rootViewController" id="mbO-y7-NOo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="re9-Zs-aFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1869" y="-585"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="fantasypizza" width="2400" height="1500"/>
         <image name="settings_nav" width="25" height="25"/>
         <image name="skull" width="250" height="250"/>
         <image name="tutorial" width="750" height="2216"/>
