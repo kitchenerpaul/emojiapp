@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomKeyboardViewController">
+            <connections>
+                <outlet property="collectionView" destination="biC-df-3fX" id="25y-lX-sKb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="biC-df-3fX">
+                    <rect key="frame" x="0.0" y="-5" width="320" height="166"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="166" id="SsB-Ot-HA0"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="psN-Kn-EUq">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="IcA-P3-OBa"/>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="0jv-D5-xCP"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0a-Yc-A6s">
+                    <rect key="frame" x="0.0" y="161" width="320" height="51"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="7Vx-J4-ndd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="biC-df-3fX" secondAttribute="trailing" id="CX0-8P-xSj"/>
+                <constraint firstAttribute="trailing" secondItem="J0a-Yc-A6s" secondAttribute="trailing" id="OEi-Se-FP7"/>
+                <constraint firstItem="J0a-Yc-A6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TGA-cD-aSh"/>
+                <constraint firstAttribute="bottom" secondItem="J0a-Yc-A6s" secondAttribute="bottom" id="bs8-Uf-KzT"/>
+                <constraint firstItem="biC-df-3fX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="edx-hP-HnG"/>
+                <constraint firstItem="J0a-Yc-A6s" firstAttribute="top" secondItem="biC-df-3fX" secondAttribute="bottom" id="zu0-0r-xAx"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
