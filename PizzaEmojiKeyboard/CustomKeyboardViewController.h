@@ -11,5 +11,8 @@
 
 @interface CustomKeyboardViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *globeKey;
+@property NSArray *emojiIcons;
+
 
 @end
