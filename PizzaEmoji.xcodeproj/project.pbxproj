@@ -380,7 +380,7 @@
 				TargetAttributes = {
 					17A76FFF1D0F916D00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = K98CEHYX2Z;
+						DevelopmentTeam = 8PYPHDP698;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -397,6 +397,7 @@
 					};
 					87243E651D109D3700E3C1A7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8PYPHDP698;
 					};
 				};
 			};
@@ -612,7 +613,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Kitchener (8PYPHDP698)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Kitchener (8PYPHDP698)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -643,7 +645,7 @@
 				INFOPLIST_FILE = PizzaEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.pizzaemojiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -659,7 +661,7 @@
 				INFOPLIST_FILE = PizzaEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.pizzaemojiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -714,10 +716,11 @@
 		87243E6F1D109D3700E3C1A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PizzaEmojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji.PizzaEmojiKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.pizzaemojiapp.PizzaEmojiKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -726,10 +729,11 @@
 		87243E701D109D3700E3C1A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PizzaEmojiKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.PizzaEmoji.PizzaEmojiKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boxscoregames.pizzaemojiapp.PizzaEmojiKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
