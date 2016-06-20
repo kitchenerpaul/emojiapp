@@ -8,9 +8,11 @@
 
 #import "KeyboardViewController.h"
 #import "KeyboardCollectionViewCell.h"
+#import "CustomKeyboardViewController.h"
 
 @interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property (strong, nonatomic)  CustomKeyboardViewController *keyboard;
 @property UICollectionView *collectionView;
 
 @end
@@ -27,7 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.emojiIcons = [NSArray arrayWithObjects:@"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", nil];
+    
     // Perform custom UI setup here
+    [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,14 +44,14 @@
 
 // Change Next KeyBoard
 
-//- (void)addGesturesToKeyboard {
-//    [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode)forControlEvents:UIControlEventTouchUpInside];
-//    
-//}
+- (void)addGesturesToKeyboard {
+    [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode)forControlEvents:UIControlEventTouchUpInside];
+    
+}
 
-//- (void)pressKey:(UIButton *)key {
-//    [self.textDocumentProxy insertText:[key currentTitle]];
-//}
+- (void)pressKey:(UIButton *)key {
+    [self.textDocumentProxy insertText:[key currentTitle]];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -65,13 +70,21 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 30;
+    return self.emojiIcons.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
     
+    // Code below does not load the images
+    
+//    UIImageView *emojiImageView = [[UIImageView alloc] init];
+//    emojiImageView.image = [self.emojiIcons objectAtIndex:indexPath.row];
+//    [cell addSubview:emojiImageView];
+    
+    // End code that does not load the images
+
     if (indexPath.row % 2 == 0) {
         cell.backgroundColor = [UIColor redColor];
     } else {
@@ -84,8 +97,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     KeyboardCollectionViewCell *cell = (KeyboardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     NSArray *views = [cell.contentView subviews];
-    UILabel *label = [views objectAtIndex:0];
-    NSLog(@"Select %@",label.text);
+//    UILabel *label = [views objectAtIndex:0];
+//    NSLog(@"Select %@",label.text);
+    
+    // Copy the data to the Clipboard
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    NSData *imgData = UIImagePNGRepresentation(@"skull");
+    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
+
 }
 
 
@@ -104,6 +123,44 @@
     }
     [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
 }
+
+#pragma mark -
+
+- (void)keyboardViewShouldAdvanceToNextInputMode
+{
+    [self advanceToNextInputMode];
+}
+
+- (void)keyboardViewShouldDismiss
+{
+    [self dismissKeyboard];
+}
+
+- (void)keyboardViewDidInputDelete
+{
+    [self.textDocumentProxy deleteBackward];
+}
+
+- (void)keyboardViewDidInputReturn
+{
+    [self.textDocumentProxy insertText:@"\n"];
+}
+
+- (void)keyboardViewBackCursor
+{
+    [self.textDocumentProxy adjustTextPositionByCharacterOffset:-1];
+}
+
+- (void)keyboardViewForwardCursor
+{
+    [self.textDocumentProxy adjustTextPositionByCharacterOffset:1];
+}
+
+- (void)keyboardView:(KeyboardViewController *)keyboardViewController didAcceptCandidate:(NSString *)candidate
+{
+    [self.textDocumentProxy insertText:candidate];
+}
+
 
 
 @end

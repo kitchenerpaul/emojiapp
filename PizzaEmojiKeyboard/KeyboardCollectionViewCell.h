@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface KeyboardCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *cellLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *emojiImageView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 
 @end

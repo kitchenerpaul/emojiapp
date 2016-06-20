@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomKeyboardViewController">
             <connections>
                 <outlet property="collectionView" destination="biC-df-3fX" id="25y-lX-sKb"/>
+                <outlet property="globeKey" destination="Ldv-Ug-rZd" id="mra-tH-yjZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,9 +20,6 @@
             <subviews>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="biC-df-3fX">
                     <rect key="frame" x="0.0" y="-5" width="320" height="166"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="166" id="SsB-Ot-HA0"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="psN-Kn-EUq">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,20 +33,35 @@
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0a-Yc-A6s">
                     <rect key="frame" x="0.0" y="161" width="320" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldv-Ug-rZd">
+                            <rect key="frame" x="8" y="8" width="91" height="30"/>
+                            <state key="normal" title="Globe Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95A-Xb-o2F">
+                            <rect key="frame" x="218" y="8" width="94" height="30"/>
+                            <state key="normal" title="Delete Button"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="51" id="7Vx-J4-ndd"/>
+                        <constraint firstAttribute="bottom" secondItem="Ldv-Ug-rZd" secondAttribute="bottom" constant="13" id="4m4-7R-2S4"/>
+                        <constraint firstItem="Ldv-Ug-rZd" firstAttribute="baseline" secondItem="95A-Xb-o2F" secondAttribute="baseline" id="CR6-Vn-1En"/>
+                        <constraint firstItem="Ldv-Ug-rZd" firstAttribute="leading" secondItem="J0a-Yc-A6s" secondAttribute="leadingMargin" id="LdV-o1-uLI"/>
+                        <constraint firstItem="95A-Xb-o2F" firstAttribute="trailing" secondItem="J0a-Yc-A6s" secondAttribute="trailingMargin" id="WnI-um-GzW"/>
+                        <constraint firstItem="Ldv-Ug-rZd" firstAttribute="top" secondItem="J0a-Yc-A6s" secondAttribute="topMargin" id="jAp-hl-30g"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="biC-df-3fX" secondAttribute="trailing" id="CX0-8P-xSj"/>
-                <constraint firstAttribute="trailing" secondItem="J0a-Yc-A6s" secondAttribute="trailing" id="OEi-Se-FP7"/>
-                <constraint firstItem="J0a-Yc-A6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TGA-cD-aSh"/>
-                <constraint firstAttribute="bottom" secondItem="J0a-Yc-A6s" secondAttribute="bottom" id="bs8-Uf-KzT"/>
-                <constraint firstItem="biC-df-3fX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="edx-hP-HnG"/>
-                <constraint firstItem="J0a-Yc-A6s" firstAttribute="top" secondItem="biC-df-3fX" secondAttribute="bottom" id="zu0-0r-xAx"/>
+                <constraint firstAttribute="trailing" secondItem="J0a-Yc-A6s" secondAttribute="trailing" id="WO1-VL-T80"/>
+                <constraint firstItem="J0a-Yc-A6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aPc-q6-kZF"/>
+                <constraint firstItem="biC-df-3fX" firstAttribute="trailing" secondItem="J0a-Yc-A6s" secondAttribute="trailing" id="bXM-Hw-ka4"/>
+                <constraint firstAttribute="bottom" secondItem="J0a-Yc-A6s" secondAttribute="bottom" id="ccv-QX-Qqu"/>
+                <constraint firstItem="J0a-Yc-A6s" firstAttribute="top" secondItem="biC-df-3fX" secondAttribute="bottom" id="ht6-3c-gFU"/>
+                <constraint firstItem="biC-df-3fX" firstAttribute="leading" secondItem="J0a-Yc-A6s" secondAttribute="leading" id="kAa-iQ-aOu"/>
+                <constraint firstItem="biC-df-3fX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-5" id="qUd-8Q-lwd"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
