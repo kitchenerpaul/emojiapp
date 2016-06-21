@@ -7,12 +7,8 @@
 //
 
 #import "SettingsViewController.h"
-#import "SettingsTableViewCell.h"
 
-@interface SettingsViewController () <UITableViewDataSource, UITableViewDelegate>
-
-@property NSArray *settingsTitles;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface SettingsViewController ()
 
 @end
 
@@ -26,7 +22,6 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
-    self.settingsTitles = [[NSArray alloc] initWithObjects:@"Rate the App", @"Install Keyboard", @"Share with Friends", @"Follow Us!", nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -36,32 +31,24 @@
     
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.settingsTitles.count;
+- (IBAction)onRateAppButtonPressed:(UIButton *)sender {
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.apple.com"]];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SettingsTableViewCell *settingsCell = [tableView dequeueReusableCellWithIdentifier:@"SettingsCellID" forIndexPath:indexPath];
-    settingsCell.titleLabel.text = [self.settingsTitles objectAtIndex:indexPath.row];
-    return settingsCell;
+- (IBAction)onInstallKeyboardButtonPressed:(UIButton *)sender {
+
+    [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (IBAction)onShareWithFriendsButtonPressed:(UIButton *)sender {
 
-        if (indexPath.row == 0) {
-            //Rate the App
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.apple.com"]];
-        } else if (indexPath.row == 1) {
-            //Install Keyboard Tutorial
-            [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
-        } else if (indexPath.row == 2) {
-            //Share with Friends
-            [self shareContent];
-        } else if (indexPath.row == 3) {
-            //Follow Us
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.instagram.com/boxscoregames/"]];
-        }
+    [self shareContent];
+}
+
+- (IBAction)onFollowUsButtonPressed:(UIButton *)sender {
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.instagram.com/boxscoregames/"]];
 }
 
 - (IBAction)onWinFreePizzaButtonPressed:(UIButton *)sender {

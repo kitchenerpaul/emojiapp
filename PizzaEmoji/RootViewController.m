@@ -33,7 +33,11 @@
     emojis = [NSMutableArray new];
 
     for (int i = 0; i < 30; i++) {
-        [emojis addObject:[UIImage imageNamed:@"skull"]];
+        if (i%2==0) {
+            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
+        } else {
+            [emojis addObject:[UIImage imageNamed:@"mopizza"]];
+        }
     }
 
     // Set navigation bar to a red color

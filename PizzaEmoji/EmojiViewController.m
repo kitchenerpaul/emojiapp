@@ -20,6 +20,14 @@
     self.emojiImageView.image = self.emoji;
     self.shareButton.layer.cornerRadius = 5;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    //add tap gesture to emoji imageview
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(shareContent)];
+    tap.cancelsTouchesInView = YES;
+    tap.numberOfTapsRequired = 1;
+
+    [self.emojiImageView addGestureRecognizer:tap];
+    self.emojiImageView.userInteractionEnabled = YES;
 }
 
 - (IBAction)onShareButtonPressed:(UIButton *)sender {

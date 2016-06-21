@@ -22,7 +22,6 @@
 		87243E6A1D109D3700E3C1A7 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E691D109D3700E3C1A7 /* KeyboardViewController.m */; };
 		87243E6E1D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 87243E661D109D3700E3C1A7 /* PizzaEmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		87243E7A1D10B06C00E3C1A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E791D10B06C00E3C1A7 /* SettingsViewController.m */; };
-		87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */; };
 		87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */; };
 		87243E941D110E3E00E3C1A7 /* WinFreePizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E931D110E3E00E3C1A7 /* WinFreePizzaViewController.m */; };
 		87243E971D110E4C00E3C1A7 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87243E961D110E4C00E3C1A7 /* PrivacyPolicyViewController.m */; };
@@ -107,8 +106,6 @@
 		87243E6B1D109D3700E3C1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87243E781D10B06C00E3C1A7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		87243E791D10B06C00E3C1A7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
-		87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
 		87243E8C1D110E0C00E3C1A7 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		87243E8D1D110E0C00E3C1A7 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		87243E921D110E3E00E3C1A7 /* WinFreePizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinFreePizzaViewController.h; sourceTree = "<group>"; };
@@ -235,8 +232,6 @@
 			children = (
 				17A770391D0FA5BF00D264F1 /* EmojiCollectionViewCell.h */,
 				17A7703A1D0FA5BF00D264F1 /* EmojiCollectionViewCell.m */,
-				87243E821D10FE0500E3C1A7 /* SettingsTableViewCell.h */,
-				87243E831D10FE0500E3C1A7 /* SettingsTableViewCell.m */,
 				87AE910B1D14E8C0001375E0 /* KeyboardCollectionViewCell.h */,
 				87AE910C1D14E8C0001375E0 /* KeyboardCollectionViewCell.m */,
 				87AE910D1D14E8C0001375E0 /* KeyboardCollectionViewCell.xib */,
@@ -487,7 +482,6 @@
 				17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */,
 				87243EA21D11BC2700E3C1A7 /* PageContentViewController.m in Sources */,
 				87243E8E1D110E0C00E3C1A7 /* ContactUsViewController.m in Sources */,
-				87243E841D10FE0500E3C1A7 /* SettingsTableViewCell.m in Sources */,
 				87AE911A1D150825001375E0 /* KeyboardCollectionViewCell.h in Sources */,
 				87AE911B1D150829001375E0 /* KeyboardCollectionViewCell.m in Sources */,
 				87AE911C1D150833001375E0 /* KeyboardViewController.m in Sources */,
