@@ -37,9 +37,17 @@
     }
 
     // Set navigation bar to a red color
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:55/255.2f  blue:33/255.2f  alpha:1]];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
     // Set navigation bar title color to white
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
+
 }
 
 #pragma mark UICollectionView DataSource

@@ -10,4 +10,10 @@
 
 @implementation TutorialViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.navigationItem.title = @"Install Keyboard";
+}
+
 @end

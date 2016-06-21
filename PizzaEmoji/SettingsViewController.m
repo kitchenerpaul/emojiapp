@@ -22,11 +22,18 @@
     [super viewDidLoad];
 
     // Set navigation bar colors
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:55/255.2f  blue:33/255.2f  alpha:1]];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:55/255.2f  blue:33/255.2f  alpha:1]];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
     self.settingsTitles = [[NSArray alloc] initWithObjects:@"Rate the App", @"Install Keyboard", @"Share with Friends", @"Follow Us!", nil];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
+    
 }
 
 #pragma mark - UITableViewDataSource
