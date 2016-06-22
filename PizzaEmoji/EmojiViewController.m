@@ -28,6 +28,14 @@
 
     [self.emojiImageView addGestureRecognizer:tap];
     self.emojiImageView.userInteractionEnabled = YES;
+
+    self.slider.maximumValue = 1;
+    self.slider.minimumValue = 0.3;
+    self.slider.value = 1;
+
+    [self.slider addTarget:self
+                    action:@selector(sliderValueChanged:)
+          forControlEvents:UIControlEventValueChanged];
 }
 
 - (IBAction)onShareButtonPressed:(UIButton *)sender {
@@ -41,6 +49,10 @@
     NSArray *shareItems = @[message, image];
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     [self presentViewController:avc animated:YES completion:nil];
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    self.emojiImageView.transform = CGAffineTransformMakeScale(sender.value, sender.value);
 }
 
 @end
