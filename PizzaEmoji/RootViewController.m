@@ -45,9 +45,8 @@
     // Set navigation bar to a red color
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
     // Set navigation bar title color to white
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
-    UIImage *freePizzaImage = [UIImage imageNamed:@"freepizza"];
+    UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
     CGRect pizzaFrame = CGRectMake(0, 0, 70, 35);
     UIButton *pizzaButton = [[UIButton alloc] initWithFrame:pizzaFrame];
     [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
@@ -62,8 +61,15 @@
 
 -(void)viewDidAppear:(BOOL)animated {
 
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.topItem.title = @"PizzaEmoji";
+
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
+
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:32] };
 
 }
 

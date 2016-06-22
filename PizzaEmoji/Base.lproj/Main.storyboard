@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--PizzaEmoji-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="PizzaEmoji" id="HOm-ym-vg8">
+                    <navigationItem key="navigationItem" id="HOm-ym-vg8">
                         <barButtonItem key="rightBarButtonItem" image="settings_nav" id="dLy-5r-vap">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -153,9 +153,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-L0-tKw">
-                                <rect key="frame" x="25" y="20" width="555" height="55"/>
+                                <rect key="frame" x="25" y="20" width="555" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="dzq-E3-rUg"/>
+                                    <constraint firstAttribute="height" constant="50" id="dzq-E3-rUg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Rate the App">
@@ -166,9 +166,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z16-9o-6Cd">
-                                <rect key="frame" x="25" y="80" width="555" height="55"/>
+                                <rect key="frame" x="25" y="70" width="555" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="RnQ-bk-Wbo"/>
+                                    <constraint firstAttribute="height" constant="50" id="RnQ-bk-Wbo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Install Keyboard">
@@ -179,9 +179,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIz-SB-cAp">
-                                <rect key="frame" x="25" y="140" width="555" height="55"/>
+                                <rect key="frame" x="25" y="120" width="555" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="ZoF-le-3YA"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZoF-le-3YA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Share with Friends">
@@ -192,9 +192,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2T-f6-8lc">
-                                <rect key="frame" x="25" y="200" width="555" height="55"/>
+                                <rect key="frame" x="25" y="170" width="555" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="cJO-To-7u6"/>
+                                    <constraint firstAttribute="height" constant="50" id="cJO-To-7u6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Follow Us!">
@@ -205,7 +205,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efq-aw-vHb">
-                                <rect key="frame" x="0.0" y="290" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="255" width="600" height="70"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Duf-ly-7z2"/>
@@ -223,7 +223,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="z16-9o-6Cd" secondAttribute="trailing" constant="20" id="3Df-cf-Gz1"/>
                             <constraint firstItem="efq-aw-vHb" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" id="6eh-QZ-y05"/>
-                            <constraint firstItem="v2T-f6-8lc" firstAttribute="top" secondItem="QIz-SB-cAp" secondAttribute="bottom" constant="5" id="ENx-TX-1x7"/>
+                            <constraint firstItem="v2T-f6-8lc" firstAttribute="top" secondItem="QIz-SB-cAp" secondAttribute="bottom" id="ENx-TX-1x7"/>
                             <constraint firstItem="psJ-L0-tKw" firstAttribute="top" secondItem="HsS-BH-f29" secondAttribute="bottom" constant="20" id="GQu-tW-hS2"/>
                             <constraint firstItem="psJ-L0-tKw" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" constant="25" id="Q2R-DM-bJP"/>
                             <constraint firstItem="kjC-x0-vUD" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" constant="25" id="QVv-9c-XvU"/>
@@ -232,12 +232,12 @@
                             <constraint firstItem="v2T-f6-8lc" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" constant="25" id="UbS-Mw-pwb"/>
                             <constraint firstAttribute="trailing" secondItem="v2T-f6-8lc" secondAttribute="trailing" constant="20" id="X5s-E5-Tkc"/>
                             <constraint firstItem="z16-9o-6Cd" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" constant="25" id="Yn6-VU-OLb"/>
-                            <constraint firstItem="QIz-SB-cAp" firstAttribute="top" secondItem="z16-9o-6Cd" secondAttribute="bottom" constant="5" id="a00-YT-ocN"/>
+                            <constraint firstItem="QIz-SB-cAp" firstAttribute="top" secondItem="z16-9o-6Cd" secondAttribute="bottom" id="a00-YT-ocN"/>
                             <constraint firstItem="QIz-SB-cAp" firstAttribute="leading" secondItem="Hph-jC-CdS" secondAttribute="leading" constant="25" id="a7w-Oy-gm8"/>
                             <constraint firstAttribute="trailing" secondItem="QIz-SB-cAp" secondAttribute="trailing" constant="20" id="cWn-wN-TIc"/>
                             <constraint firstAttribute="trailing" secondItem="psJ-L0-tKw" secondAttribute="trailing" constant="20" id="lLL-i8-k3c"/>
                             <constraint firstAttribute="trailing" secondItem="efq-aw-vHb" secondAttribute="trailing" id="qAF-Ov-oe3"/>
-                            <constraint firstItem="z16-9o-6Cd" firstAttribute="top" secondItem="psJ-L0-tKw" secondAttribute="bottom" constant="5" id="tWi-ew-ftU"/>
+                            <constraint firstItem="z16-9o-6Cd" firstAttribute="top" secondItem="psJ-L0-tKw" secondAttribute="bottom" id="tWi-ew-ftU"/>
                             <constraint firstItem="kj6-02-BeM" firstAttribute="top" secondItem="kjC-x0-vUD" secondAttribute="bottom" id="wT0-xe-XHk"/>
                             <constraint firstItem="efq-aw-vHb" firstAttribute="top" secondItem="v2T-f6-8lc" secondAttribute="bottom" constant="35" id="z9l-Wy-DWf"/>
                         </constraints>

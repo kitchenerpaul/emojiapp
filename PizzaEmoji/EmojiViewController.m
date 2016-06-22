@@ -21,6 +21,10 @@
     self.shareButton.layer.cornerRadius = 5;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"< Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissView)];
+
+
+
     //add tap gesture to emoji imageview
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(shareContent)];
     tap.cancelsTouchesInView = YES;
@@ -36,6 +40,10 @@
     [self.slider addTarget:self
                     action:@selector(sliderValueChanged:)
           forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)dismissView {
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 - (IBAction)onShareButtonPressed:(UIButton *)sender {
