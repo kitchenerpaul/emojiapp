@@ -23,8 +23,6 @@
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"< Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissView)];
 
-
-
     //add tap gesture to emoji imageview
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(shareContent)];
     tap.cancelsTouchesInView = YES;
@@ -33,13 +31,13 @@
     [self.emojiImageView addGestureRecognizer:tap];
     self.emojiImageView.userInteractionEnabled = YES;
 
-    self.slider.maximumValue = 1;
-    self.slider.minimumValue = 0.3;
-    self.slider.value = 1;
-
     [self.slider addTarget:self
                     action:@selector(sliderValueChanged:)
           forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self sliderValueChanged:self.slider];
 }
 
 - (void)dismissView {
