@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,28 +13,20 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="155" height="167"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-RE-Owa">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-RE-Owa">
                         <rect key="frame" x="8" y="129" width="139" height="30"/>
                         <state key="normal" title="Back"/>
                         <connections>
                             <action selector="backButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Gji-z5-QBi"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cPd-B8-oMZ">
-                        <rect key="frame" x="34" y="23" width="87" height="86"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cPd-B8-oMZ">
+                        <rect key="frame" x="8" y="8" width="139" height="113"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <constraints>
-                <constraint firstItem="cPd-B8-oMZ" firstAttribute="centerX" secondItem="UmX-RE-Owa" secondAttribute="centerX" id="0iL-cW-YGL"/>
-                <constraint firstItem="UmX-RE-Owa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="7wl-7K-XwS"/>
-                <constraint firstItem="UmX-RE-Owa" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="GJ0-22-zOh"/>
-                <constraint firstItem="UmX-RE-Owa" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="HJt-gH-5XJ"/>
-                <constraint firstItem="cPd-B8-oMZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="34" id="O3n-1M-ecK"/>
-                <constraint firstItem="UmX-RE-Owa" firstAttribute="top" secondItem="cPd-B8-oMZ" secondAttribute="bottom" constant="20" id="dFx-bj-DK7"/>
-                <constraint firstItem="cPd-B8-oMZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="23" id="vUm-N8-P6W"/>
-            </constraints>
             <connections>
                 <outlet property="backButton" destination="UmX-RE-Owa" id="RIL-3e-oHx"/>
                 <outlet property="emojiImageView" destination="cPd-B8-oMZ" id="UOu-8u-mqd"/>

@@ -29,10 +29,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.emojiIcons = [NSArray arrayWithObjects:@"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", nil];
+    self.emojiIcons = [NSArray arrayWithObjects:@"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", nil];
+    
+    [self setupGlobalButton];
     
     // Perform custom UI setup here
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)setupGlobalButton {
+    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    
+    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    [self.nextKeyboardButton sizeToFit];
+    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.nextKeyboardButton];
+    
+    [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+    [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,10 +78,13 @@
     layout.itemSize = CGSizeMake(150, 150);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
+    self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerNib:[UINib nibWithNibName:@"KeyboardCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"];
+    
+    
     
     [self.view addSubview:self.collectionView];
 }
@@ -74,8 +94,9 @@
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
+- (KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    KeyboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
+    cell.emojiImageView.image = [UIImage imageNamed:self.emojiIcons[indexPath.row]];
     
     // Code below does not load the images
     
@@ -94,18 +115,18 @@
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    KeyboardCollectionViewCell *cell = (KeyboardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    NSArray *views = [cell.contentView subviews];
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    KeyboardCollectionViewCell *cell = (KeyboardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    NSArray *views = [cell.contentView subviews];
 //    UILabel *label = [views objectAtIndex:0];
 //    NSLog(@"Select %@",label.text);
     
     // Copy the data to the Clipboard
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    NSData *imgData = UIImagePNGRepresentation(@"skull");
-    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
-
-}
+//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+//    NSData *imgData = UIImagePNGRepresentation(@"skull");
+//    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
+//
+//}
 
 
 - (void)textWillChange:(id<UITextInput>)textInput {
