@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1753FEF91D1B1BA800A6ECDB /* soupofjustice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1753FEF81D1B1BA800A6ECDB /* soupofjustice.ttf */; };
 		17A770051D0F916D00D264F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770041D0F916D00D264F1 /* main.m */; };
 		17A770081D0F916D00D264F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A770071D0F916D00D264F1 /* AppDelegate.m */; };
 		17A7700B1D0F916D00D264F1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A7700A1D0F916D00D264F1 /* RootViewController.m */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1753FEF81D1B1BA800A6ECDB /* soupofjustice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soupofjustice.ttf; sourceTree = "<group>"; };
 		17A770001D0F916D00D264F1 /* PizzaEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A770041D0F916D00D264F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A770061D0F916D00D264F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				17A770141D0F916D00D264F1 /* LaunchScreen.storyboard */,
 				17A770171D0F916D00D264F1 /* Info.plist */,
 				17A7700F1D0F916D00D264F1 /* PizzaEmoji.xcdatamodeld */,
+				1753FEF81D1B1BA800A6ECDB /* soupofjustice.ttf */,
 				17A770041D0F916D00D264F1 /* main.m */,
 				87243E981D11921600E3C1A7 /* InstallKeyboardTutorial-Swipe */,
 			);
@@ -418,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1753FEF91D1B1BA800A6ECDB /* soupofjustice.ttf in Resources */,
 				17A770161D0F916D00D264F1 /* LaunchScreen.storyboard in Resources */,
 				17A770131D0F916D00D264F1 /* Assets.xcassets in Resources */,
 				17A7700E1D0F916D00D264F1 /* Main.storyboard in Resources */,
@@ -442,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87AE91191D14F723001375E0 /* CustomKeyboardViewController.xib in Resources */,
 				87AE910F1D14E8C0001375E0 /* KeyboardCollectionViewCell.xib in Resources */,
 				8709E18B1D1B313100679113 /* Assets.xcassets in Resources */,
 			);

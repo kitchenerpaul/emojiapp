@@ -22,6 +22,8 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"< Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissView)];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -29,6 +31,10 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
     
+}
+
+- (void)dismissView {
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 - (IBAction)onRateAppButtonPressed:(UIButton *)sender {

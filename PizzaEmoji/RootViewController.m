@@ -34,23 +34,42 @@
 
     for (int i = 0; i < 30; i++) {
         if (i%2==0) {
-            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
-        } else {
             [emojis addObject:[UIImage imageNamed:@"mopizza"]];
+        } else if (i%3==0) {
+            [emojis addObject:[UIImage imageNamed:@"pizzapie"]];
+        } else {
+            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
         }
     }
 
     // Set navigation bar to a red color
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
     // Set navigation bar title color to white
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+    UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
+    CGRect pizzaFrame = CGRectMake(0, 0, 70, 35);
+    UIButton *pizzaButton = [[UIButton alloc] initWithFrame:pizzaFrame];
+    [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
+    [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
+         forControlEvents:UIControlEventTouchUpInside];
+    [pizzaButton setShowsTouchWhenHighlighted:YES];
+
+    UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
+    self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
 
 }
 
 -(void)viewDidAppear:(BOOL)animated {
 
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.topItem.title = @"PizzaEmoji";
+
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
+
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:32] };
 
 }
 
@@ -87,6 +106,11 @@
 
     selectedEmoji = [emojis objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"RootToEmojiSegue" sender:self];
+}
+
+
+-(void)segueToPizzaPage {
+    NSLog(@"Yay for Pizza!");
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
