@@ -9,12 +9,14 @@
 #import "RootViewController.h"
 #import "EmojiCollectionViewCell.h"
 #import "EmojiViewController.h"
+#import "SettingsViewController.h"
 
 @interface RootViewController ()
 {
     CGFloat cellHeight;
     NSMutableArray *emojis;
     UIImage *selectedEmoji;
+    SettingsViewController *settingsVC;
 }
 
 @end
@@ -30,17 +32,17 @@
     CGFloat cellWidth =  [self calcCellWidth:self.view.frame.size];
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
 
-    emojis = [NSMutableArray new];
+    emojis = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"pizzatown"], [UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"pizzatown"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"pizzatown"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"pizzatown"], [UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"pizzatown"], nil];
 
-    for (int i = 0; i < 30; i++) {
-        if (i%2==0) {
-            [emojis addObject:[UIImage imageNamed:@"mopizza"]];
-        } else if (i%3==0) {
-            [emojis addObject:[UIImage imageNamed:@"pizzapie"]];
-        } else {
-            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
-        }
-    }
+//    for (int i = 0; i < 30; i++) {
+//        if (i%2==0) {
+//            [emojis addObject:[UIImage imageNamed:@"mopizza"]];
+//        } else if (i%3==0) {
+//            [emojis addObject:[UIImage imageNamed:@"pizzapie"]];
+//        } else {
+//            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
+//        }
+//    }
 
     // Set navigation bar to a red color
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
@@ -56,10 +58,6 @@
 
     UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
     self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
-
-}
-
--(void)viewDidAppear:(BOOL)animated {
 
 }
 
@@ -110,7 +108,7 @@
 
 
 -(void)segueToPizzaPage {
-    NSLog(@"Yay for Pizza!");
+    [self performSegueWithIdentifier:@"RootToSettingsSegue" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -120,6 +118,9 @@
     if ([segue.identifier isEqualToString:@"RootToEmojiSegue"]) {
         EmojiViewController *evc = segue.destinationViewController;
         evc.emoji = selectedEmoji;
+    } else if ([segue.identifier isEqualToString:@"RootToSettingsSegue"]) {
+        settingsVC = segue.destinationViewController;
+        settingsVC.sourceSegueID = @"FREEPIZZA";
     }
 }
 

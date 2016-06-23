@@ -10,4 +10,6 @@
 
 @interface PrivacyPolicyViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView *privacyPolicyTextView;
+
 @end
