@@ -33,6 +33,14 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    self.view.hidden = YES;
+    if ([self.sourceSegueID isEqualToString:@"FREEPIZZA"]) {
+        [self performSegueWithIdentifier:@"WinFreePizzaSegue" sender:self];
+    }
+    self.view.hidden = NO;
+}
+
 - (void)dismissView {
     [[self navigationController] popViewControllerAnimated:YES];
 }
@@ -60,6 +68,7 @@
 - (IBAction)onWinFreePizzaButtonPressed:(UIButton *)sender {
 
     [self performSegueWithIdentifier:@"WinFreePizzaSegue" sender:self];
+//    self.sourceSegueID = nil;
 
 }
 
@@ -98,6 +107,10 @@
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell{
+
+    if ([segue.identifier isEqualToString:@"WinFreePizzaSegue"]) {
+        self.sourceSegueID = @"";
+    }
 
 }
 

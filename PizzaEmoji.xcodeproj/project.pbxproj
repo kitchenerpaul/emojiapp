@@ -383,7 +383,7 @@
 					};
 					87243E651D109D3700E3C1A7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = K98CEHYX2Z;
+						DevelopmentTeam = 8PYPHDP698;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -443,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87AE910F1D14E8C0001375E0 /* KeyboardCollectionViewCell.xib in Resources */,
 				8709E18B1D1B313100679113 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
