@@ -7,7 +7,6 @@
 //
 
 #import "KeyboardViewController.h"
-#import "KeyboardCollectionViewCell.h"
 #import "CustomKeyboardViewController.h"
 
 @interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -82,9 +81,7 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"KeyboardCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"];
-    
-    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CELL"];
     
     [self.view addSubview:self.collectionView];
 }
@@ -94,23 +91,12 @@
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    KeyboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
-    cell.emojiImageView.image = [UIImage imageNamed:self.emojiIcons[indexPath.row]];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = (UICollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
+    UIImageView *emojiImageView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
+    emojiImageView.image = [UIImage imageNamed:self.emojiIcons[indexPath.row]];
+    [cell.contentView addSubview:emojiImageView];
     
-    // Code below does not load the images
-    
-//    UIImageView *emojiImageView = [[UIImageView alloc] init];
-//    emojiImageView.image = [self.emojiIcons objectAtIndex:indexPath.row];
-//    [cell addSubview:emojiImageView];
-    
-    // End code that does not load the images
-
-    if (indexPath.row % 2 == 0) {
-        cell.backgroundColor = [UIColor redColor];
-    } else {
-        cell.backgroundColor = [UIColor blueColor];
-    }
     
     return cell;
 }
@@ -182,6 +168,6 @@
     [self.textDocumentProxy insertText:candidate];
 }
 
-
+// New
 
 @end

@@ -23,8 +23,5 @@
     return self;
 }
 
-- (IBAction)backButtonPressed:(id)sender {
-    [self.backButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-}
 
 @end
