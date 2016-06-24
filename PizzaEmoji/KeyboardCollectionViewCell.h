@@ -2,7 +2,7 @@
 //  KeyboardCollectionViewCell.h
 //  PizzaEmoji
 //
-//  Created by Amar Bhatia on 6/17/16.
+//  Created by Paul Kitchener on 6/23/16.
 //  Copyright © 2016 Box Score Games. All rights reserved.
 //
 
@@ -10,5 +10,7 @@
 
 @interface KeyboardCollectionViewCell : UICollectionViewCell
 
+@property UIImageView *emojiImageView;
+@property NSString *imageName;
 
 @end

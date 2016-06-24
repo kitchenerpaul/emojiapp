@@ -8,11 +8,16 @@
 
 #import "KeyboardViewController.h"
 #import "CustomKeyboardViewController.h"
+#import "KeyboardCollectionViewCell.h"
+
 
 @interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
 @property (strong, nonatomic)  CustomKeyboardViewController *keyboard;
 @property UICollectionView *collectionView;
+@property UICollectionViewCell *collectionViewCell;
+
+@property NSArray *imageNames;
 
 @end
 
@@ -20,40 +25,58 @@
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    
+
     // Add custom view sizing constraints here
-    
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.emojiIcons = [NSArray arrayWithObjects:@"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", nil];
-    
+
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
+
+
+    self.imageNames = [NSArray arrayWithObjects:@"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown",nil];
+
+    NSMutableArray *images = [NSMutableArray new];
+
+    for (NSString *imageName in self.imageNames) {
+        [images addObject:[UIImage imageNamed:imageName]];
+    }
+
+    self.emojiIcons = [NSArray arrayWithArray:images];
+
     [self setupGlobalButton];
-    
+
     // Perform custom UI setup here
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
+    //    [[UIPasteboard generalPasteboard] setImage:nil];
+    NSLog(@"MEMORY BREACH!");
+}
+
+-(void)onKeyboardHide:(NSNotification *)notification
+{
+    NSLog(@"---> KEYBOARD HIDE NOTIFICATION");
+}
+
 - (void)setupGlobalButton {
     self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
+
     [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
     [self.nextKeyboardButton sizeToFit];
     self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
     [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-    
+
     [self.view addSubview:self.nextKeyboardButton];
-    
+
     [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated
 }
 
 #pragma Change Keyboards
@@ -62,7 +85,6 @@
 
 - (void)addGesturesToKeyboard {
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode)forControlEvents:UIControlEventTouchUpInside];
-    
 }
 
 - (void)pressKey:(UIButton *)key {
@@ -71,18 +93,18 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    layout.itemSize = CGSizeMake(150, 150);
+    layout.sectionInset = UIEdgeInsetsMake(0, 10, 10, 0);
+    layout.itemSize = CGSizeMake(60, 60);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
+
     CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
     self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CELL"];
-    
+    [self.collectionView registerClass:[KeyboardCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
     [self.view addSubview:self.collectionView];
 }
 
@@ -91,28 +113,19 @@
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = (UICollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
-    UIImageView *emojiImageView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
-    emojiImageView.image = [UIImage imageNamed:self.emojiIcons[indexPath.row]];
-    [cell.contentView addSubview:emojiImageView];
-    
-    
-    return cell;
-}
+- (KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    KeyboardCollectionViewCell *keyboardCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
+    if(keyboardCell.emojiImageView == nil) {
+        keyboardCell.emojiImageView = [[UIImageView alloc] initWithFrame:keyboardCell.contentView.frame];
+        keyboardCell.emojiImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [keyboardCell.contentView addSubview:keyboardCell.emojiImageView];
+    }
 
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    KeyboardCollectionViewCell *cell = (KeyboardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    NSArray *views = [cell.contentView subviews];
-//    UILabel *label = [views objectAtIndex:0];
-//    NSLog(@"Select %@",label.text);
-    
-    // Copy the data to the Clipboard
-//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-//    NSData *imgData = UIImagePNGRepresentation(@"skull");
-//    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
-//
-//}
+    keyboardCell.imageName = self.imageNames[indexPath.row];
+    keyboardCell.emojiImageView.image = self.emojiIcons[indexPath.row];
+
+    return keyboardCell;
+}
 
 
 - (void)textWillChange:(id<UITextInput>)textInput {
@@ -121,7 +134,7 @@
 
 - (void)textDidChange:(id<UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
+
     UIColor *textColor = nil;
     if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
         textColor = [UIColor whiteColor];
