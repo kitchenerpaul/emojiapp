@@ -13,6 +13,7 @@
 
 @interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property (nonatomic, strong) UIButton *deleteButton;
 @property (strong, nonatomic)  CustomKeyboardViewController *keyboard;
 @property UICollectionView *collectionView;
 @property UICollectionViewCell *collectionViewCell;
@@ -47,6 +48,7 @@
     self.emojiIcons = [NSArray arrayWithArray:images];
 
     [self setupGlobalButton];
+    [self setupDeleteButton];
 
     // Perform custom UI setup here
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
@@ -77,6 +79,21 @@
 
     [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+}
+
+- (void)setupDeleteButton {
+    self.deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
+
+    [self.deleteButton setTitle:NSLocalizedString(@"Delete", @"Title for 'Delete' button") forState:UIControlStateNormal];
+    [self.deleteButton sizeToFit];
+    self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
+
+    [self.deleteButton addTarget:self action:@selector(keyboardViewDidInputDelete) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:self.deleteButton];
+
+    [self.deleteButton.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+    [self.deleteButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 }
 
 #pragma Change Keyboards
