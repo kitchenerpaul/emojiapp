@@ -11,7 +11,7 @@
 #import "KeyboardCollectionViewCell.h"
 
 
-@interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIActionSheetDelegate>
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
 @property (nonatomic, strong) UIButton *deleteButton;
 @property (strong, nonatomic)  CustomKeyboardViewController *keyboard;
@@ -37,7 +37,9 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
 
 
-    self.imageNames = [NSArray arrayWithObjects:@"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown",nil];
+    self.imageNames = [NSArray arrayWithObjects:@"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"breakfast", @"lunch", @"dinner", @"monday", @"tuesday", @"wednesday", @"thursday", @"friday", @"saturday", @"sunday", @"cheese", @"pepperoni", @"sausage", @"meatlovers", @"veggie", @"deepdish", @"toppingpepperoni", @"toppingsausage", @"toppingblackolives", @"toppingmushrooms", @"toppingonions", @"toppingpeppers", @"toppingpineapple", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"toppingshrimp", @"toppingspinach", @"toppingtomato", @"toppingbacon", @"cheatday", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown", @"fantasypizza", @"mopizza", @"pizzaordeath", @"skull", @"sliceaday", @"pizzapie", @"pizzaparty", @"pizzatown",nil];
+    
+        
 
     NSMutableArray *images = [NSMutableArray new];
 
@@ -57,7 +59,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
-    //    [[UIPasteboard generalPasteboard] setImage:nil];
+        [[UIPasteboard generalPasteboard] setImage:nil];
     NSLog(@"MEMORY BREACH!");
 }
 
