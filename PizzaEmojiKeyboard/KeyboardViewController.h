@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface KeyboardViewController : UIInputViewController
-@property NSArray *emojiIcons;
 
 
 @end

@@ -34,11 +34,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    self.view.hidden = YES;
-    if ([self.sourceSegueID isEqualToString:@"FREEPIZZA"]) {
-        [self performSegueWithIdentifier:@"WinFreePizzaSegue" sender:self];
-    }
-    self.view.hidden = NO;
+
 }
 
 - (void)dismissView {
@@ -98,19 +94,17 @@
 
 -(void)shareContent{
 
-    NSString *message = @"Get the glorious combination of pizza and emojis here:\nhttp://boxscoregames.com\n\n#PizzaEmojiApp";
-    UIImage *emojiImage = [UIImage imageNamed:@"skull"];
-    NSArray *shareItems = [[NSArray alloc]initWithObjects:emojiImage, message, nil];
+    NSString *message = @"Pizza. Emojis. Enough said.\nhttp://boxscoregames.com\n\n#PizzaEmojiApp";
+    UIImage *image = [UIImage imageNamed:@"cheatday"];
+    NSArray *shareItems = @[message, image];
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     [self presentViewController:avc animated:YES completion:nil];
+
 }
 
 #pragma mark - Segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell{
 
-    if ([segue.identifier isEqualToString:@"WinFreePizzaSegue"]) {
-        self.sourceSegueID = @"";
-    }
 
 }
 

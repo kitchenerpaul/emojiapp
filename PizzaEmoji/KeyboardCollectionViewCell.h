@@ -12,5 +12,5 @@
 
 @property UIImageView *emojiImageView;
 @property NSString *imageName;
-
+@property NSString *targetName;
 @end

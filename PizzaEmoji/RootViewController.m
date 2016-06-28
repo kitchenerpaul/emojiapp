@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSURL *localDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0];
+    NSLog(@"APP ---> %@", localDirectory.absoluteString);
+
     cellHeight = 150;
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = 0;
@@ -133,7 +136,6 @@
 
 
 -(void)segueToPizzaPage {
-//    [self performSegueWithIdentifier:@"RootToSettingsSegue" sender:self];
 
     UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
@@ -147,10 +149,7 @@
     if ([segue.identifier isEqualToString:@"RootToEmojiSegue"]) {
         EmojiViewController *evc = segue.destinationViewController;
         evc.emoji = selectedEmoji;
-    } else if ([segue.identifier isEqualToString:@"RootToSettingsSegue"]) {
-        settingsVC = segue.destinationViewController;
-        settingsVC.sourceSegueID = @"FREEPIZZA";
-    }
+    } 
 }
 
 

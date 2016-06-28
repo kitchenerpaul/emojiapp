@@ -52,8 +52,8 @@
 
     // causes error
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    pb.image = [UIImage imageNamed:self.imageName];
-    pb.persistent = YES;
+    pb.image = [UIImage imageNamed:self.targetName];
+    pb.persistent = NO;
 
     // no error
 //    [UIPasteboard generalPasteboard].image = [UIImage imageNamed:@"skull"];

@@ -34,6 +34,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
+    NSURL *localDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0];
+    NSLog(@"KEYBOARD ---> %@", localDirectory.absoluteString);
+
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
 
     self.imageNames = [NSArray arrayWithObjects:
@@ -43,36 +47,34 @@
                        @"pizzatown",
                        @"pizzaordeath",
                        @"pizzaparty",
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
+                       @"cheatday",
+                       @"breakfast",
+                       @"lunch",
+                       @"dinner",
+                       @"cheese",
+                       @"pepperoni",
+                       @"sausage",
+                       @"meatlovers",
+                       @"veggie",
+                       @"deepdish",
+                       @"sunday",
+                       @"monday",
+                       @"tuesday",
+                       @"wednesday",
+                       @"thursday",
+                       @"friday",
+                       @"saturday",
+                       @"toppingbacon",
+                       @"toppingblackolives",
+                       @"toppingmushrooms",
+                       @"toppingonions",
+                       @"toppingpepperoni",
+                       @"toppingpeppers",
+                       @"toppingpineapple",
+                       @"toppingsausage",
+                       @"toppingshrimp",
+                       @"toppingspinach",
+                       @"toppingtomato",
                        nil];
 
     
@@ -105,14 +107,6 @@
 //    @"toppingspinach",
 //    @"toppingtomato",
 
-
-    NSMutableArray *images = [NSMutableArray new];
-
-    for (NSString *imageName in self.imageNames) {
-        [images addObject:[UIImage imageNamed:imageName]];
-    }
-
-    self.emojiIcons = [NSArray arrayWithArray:images];
 
     [self setupGlobalButton];
     [self setupDeleteButton];
@@ -193,7 +187,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.emojiIcons.count;
+    return self.imageNames.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -205,8 +199,9 @@
         [keyboardCell.contentView addSubview:keyboardCell.emojiImageView];
     }
 
-    keyboardCell.imageName = self.imageNames[indexPath.row];
-    keyboardCell.emojiImageView.image = self.emojiIcons[indexPath.row];
+    keyboardCell.targetName = self.imageNames[indexPath.row];
+    keyboardCell.imageName = [NSString stringWithFormat:@"%@Keyboard", keyboardCell.targetName];
+    keyboardCell.emojiImageView.image = [UIImage imageNamed:keyboardCell.imageName];
 
     return keyboardCell;
 }

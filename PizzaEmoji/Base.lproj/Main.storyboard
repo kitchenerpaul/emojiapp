@@ -98,7 +98,6 @@
                         <outlet property="emojiCollectionView" destination="zuE-tN-aKR" id="eHX-GQ-UO1"/>
                         <outlet property="layout" destination="9KM-ow-unt" id="FVb-wx-1Tw"/>
                         <segue destination="Jkw-4u-TrM" kind="show" identifier="RootToEmojiSegue" id="V7O-Xh-wuF"/>
-                        <segue destination="qbv-yx-xyj" kind="show" identifier="RootToSettingsSegue" id="aLt-xA-Ucw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -639,7 +638,4 @@
         <image name="settings_nav" width="25" height="25"/>
         <image name="tutorial" width="750" height="2216"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="aLt-xA-Ucw"/>
-    </inferredMetricsTieBreakers>
 </document>
