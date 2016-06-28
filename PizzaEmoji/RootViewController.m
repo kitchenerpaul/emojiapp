@@ -32,19 +32,42 @@
     CGFloat cellWidth =  [self calcCellWidth:self.view.frame.size];
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
 
-    emojis = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzapie"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"Sausage"], [UIImage imageNamed:@"Cheese"], [UIImage imageNamed:@"Pepperoni"], [UIImage imageNamed:@"DeepDish"], [UIImage imageNamed:@"ToppingPepperoni"], [UIImage imageNamed:@"ToppingTomato"], [UIImage imageNamed:@"ToppingBacon"], [UIImage imageNamed:@"ToppingSpinach"], [UIImage imageNamed:@"ToppingPineapple"], [UIImage imageNamed:@"ToppingShrimp"], [UIImage imageNamed:@"Monday"], [UIImage imageNamed:@"Tuesday"], [UIImage imageNamed:@"Wednesday"], [UIImage imageNamed:@"Thursday"], [UIImage imageNamed:@"Friday"], [UIImage imageNamed:@"Saturday"], [UIImage imageNamed:@"Sunday"], [UIImage imageNamed:@"Breakfast"], [UIImage imageNamed:@"Lunch"], [UIImage imageNamed:@"Dinner"], [UIImage imageNamed:@"CheatDay"], [UIImage imageNamed:@"mopizza"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"sliceaday"], [UIImage imageNamed:@"pizzaparty"], [UIImage imageNamed:@"pizzaordeath"], [UIImage imageNamed:@"pizzatown"], nil];
-    
-//    @"Cheese", @"Pepperoni", @"Sausage", @"MeatLovers", @"Veggies", @"DeepDish", @"ToppingPepperoni", @"ToppingSausage", @"ToppingBlackOlives", @"ToppingMushrooms", @"ToppingPeppers", @"ToppingOnions", @"ToppingTomato", @"ToppingBacon", @"ToppingSpinach", @"ToppingPineapple", @"ToppingShrimp", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday", @"Sunday", @"Breakfast", @"Lunch", @"Dinner", @"CheatDay"
-
-//    for (int i = 0; i < 30; i++) {
-//        if (i%2==0) {
-//            [emojis addObject:[UIImage imageNamed:@"mopizza"]];
-//        } else if (i%3==0) {
-//            [emojis addObject:[UIImage imageNamed:@"pizzapie"]];
-//        } else {
-//            [emojis addObject:[UIImage imageNamed:@"pizzaordeath"]];
-//        }
-//    }
+    emojis = [[NSMutableArray alloc] initWithObjects:
+              [UIImage imageNamed:@"mopizza"],
+              [UIImage imageNamed:@"pizzapie"],
+              [UIImage imageNamed:@"sliceaday"],
+              [UIImage imageNamed:@"pizzatown"],
+              [UIImage imageNamed:@"pizzaordeath"],
+              [UIImage imageNamed:@"pizzaparty"],
+              [UIImage imageNamed:@"cheatday"],
+              [UIImage imageNamed:@"breakfast"],
+              [UIImage imageNamed:@"lunch"],
+              [UIImage imageNamed:@"dinner"],
+              [UIImage imageNamed:@"cheese"],
+              [UIImage imageNamed:@"pepperoni"],
+              [UIImage imageNamed:@"sausage"],
+              [UIImage imageNamed:@"meatlovers"],
+              [UIImage imageNamed:@"veggie"],
+              [UIImage imageNamed:@"deepdish"],
+              [UIImage imageNamed:@"sunday"],
+              [UIImage imageNamed:@"monday"],
+              [UIImage imageNamed:@"tuesday"],
+              [UIImage imageNamed:@"wednesday"],
+              [UIImage imageNamed:@"thursday"],
+              [UIImage imageNamed:@"friday"],
+              [UIImage imageNamed:@"saturday"],
+              [UIImage imageNamed:@"toppingbacon"],
+              [UIImage imageNamed:@"toppingblackolives"],
+              [UIImage imageNamed:@"toppingmushrooms"],
+              [UIImage imageNamed:@"toppingonions"],
+              [UIImage imageNamed:@"toppingpepperoni"],
+              [UIImage imageNamed:@"toppingpeppers"],
+              [UIImage imageNamed:@"toppingpineapple"],
+              [UIImage imageNamed:@"toppingsausage"],
+              [UIImage imageNamed:@"toppingshrimp"],
+              [UIImage imageNamed:@"toppingspinach"],
+              [UIImage imageNamed:@"toppingtomato"],
+              nil];
 
     // Set navigation bar to a red color
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
@@ -110,7 +133,11 @@
 
 
 -(void)segueToPizzaPage {
-    [self performSegueWithIdentifier:@"RootToSettingsSegue" sender:self];
+//    [self performSegueWithIdentifier:@"RootToSettingsSegue" sender:self];
+
+    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
+    [self.navigationController pushViewController:freePizzaVC animated:YES];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

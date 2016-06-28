@@ -183,7 +183,6 @@
 				17A7700C1D0F916D00D264F1 /* Main.storyboard */,
 				17A7703D1D103BBB00D264F1 /* Views */,
 				17A7703C1D103BB000D264F1 /* Cells */,
-				87243E7B1D10B28400E3C1A7 /* Models */,
 				17A770031D0F916D00D264F1 /* Supporting Files */,
 			);
 			path = PizzaEmoji;
@@ -263,14 +262,6 @@
 				87243E6B1D109D3700E3C1A7 /* Info.plist */,
 			);
 			path = PizzaEmojiKeyboard;
-			sourceTree = "<group>";
-		};
-		87243E7B1D10B28400E3C1A7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		87243E981D11921600E3C1A7 /* InstallKeyboardTutorial-Swipe */ = {
@@ -370,7 +361,7 @@
 				TargetAttributes = {
 					17A76FFF1D0F916D00D264F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 465955C7HD;
+						DevelopmentTeam = 8PYPHDP698;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -387,7 +378,7 @@
 					};
 					87243E651D109D3700E3C1A7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = K98CEHYX2Z;
+						DevelopmentTeam = 8PYPHDP698;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;

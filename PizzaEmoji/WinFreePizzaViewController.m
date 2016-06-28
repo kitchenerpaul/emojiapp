@@ -21,11 +21,20 @@
 
     self.navigationItem.title = @"FREE PIZZA";
     self.getAppButton.layer.cornerRadius = 5;
+
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"< Back" style:UIBarButtonItemStylePlain target:self action:@selector(dismissView)];
 }
 
 - (IBAction)onGetAppButtonPressed:(UIButton *)sender {
 
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://itunes.apple.com/us/app/box-score-fantasy-pizza/id696243799?mt=8"]];
+}
+
+- (void)dismissView {
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 @end

@@ -52,10 +52,7 @@
 
     // causes error
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:self.imageName ofType:@"png"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    [pb setData:data forPasteboardType:self.imageName];
-//    pb.image = [UIImage imageNamed:self.imageName];
+    pb.image = [UIImage imageNamed:self.imageName];
     pb.persistent = YES;
 
     // no error
