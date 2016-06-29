@@ -51,8 +51,9 @@
 -(void)shareContent{
 
     NSString *message = @"#PizzaEmojiApp";
-    UIImage *image = [self transformImageFromImageView];
-//    UIImage *image = [self takeRoundedScreenShot];
+    //Uncomment the following line once we're ready to use slider
+//    UIImage *image = [self transformImageFromImageView];
+    UIImage *image = self.emojiImageView.image;
     NSLog(@"%@", image);
     NSArray *shareItems = @[message, image];
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];

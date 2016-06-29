@@ -544,14 +544,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-QZ-GSa">
-                                <rect key="frame" x="225" y="100" width="150" height="150"/>
+                                <rect key="frame" x="200" y="100" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="EOR-gR-AT4"/>
-                                    <constraint firstAttribute="width" constant="150" id="gv5-z8-uly"/>
+                                    <constraint firstAttribute="height" constant="200" id="EOR-gR-AT4"/>
+                                    <constraint firstAttribute="width" constant="200" id="gv5-z8-uly"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-TM-k8X">
-                                <rect key="frame" x="187" y="430" width="225" height="50"/>
+                                <rect key="frame" x="187" y="405" width="225" height="50"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="yd9-vF-QOF"/>
@@ -565,8 +565,8 @@
                                     <action selector="onShareButtonPressed:" destination="Jkw-4u-TrM" eventType="touchUpInside" id="dzx-ng-Tt6"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.25" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Sd-cKd">
-                                <rect key="frame" x="173" y="350" width="254" height="31"/>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.25" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Sd-cKd">
+                                <rect key="frame" x="173" y="325" width="254" height="31"/>
                                 <color key="tintColor" red="0.81176470590000005" green="0.2156862745" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="9Sh-FA-VWQ"/>
@@ -587,7 +587,7 @@
                             <constraint firstItem="iGg-QZ-GSa" firstAttribute="centerX" secondItem="lhS-YW-bmi" secondAttribute="centerX" id="Uqc-5B-tRC"/>
                             <constraint firstItem="ZlG-TM-k8X" firstAttribute="trailing" secondItem="iGg-QZ-GSa" secondAttribute="trailing" id="WGl-q9-5Le"/>
                             <constraint firstItem="rz1-Sd-cKd" firstAttribute="centerX" secondItem="lhS-YW-bmi" secondAttribute="centerX" id="ahV-7b-0dV"/>
-                            <constraint firstItem="rz1-Sd-cKd" firstAttribute="top" secondItem="iGg-QZ-GSa" secondAttribute="bottom" constant="100" id="eCo-tS-j5j"/>
+                            <constraint firstItem="rz1-Sd-cKd" firstAttribute="top" secondItem="iGg-QZ-GSa" secondAttribute="bottom" constant="25" id="eCo-tS-j5j"/>
                             <constraint firstItem="rz1-Sd-cKd" firstAttribute="trailing" secondItem="iGg-QZ-GSa" secondAttribute="trailing" id="ido-U6-aq7"/>
                             <constraint firstItem="ZlG-TM-k8X" firstAttribute="leading" secondItem="iGg-QZ-GSa" secondAttribute="leading" id="pD0-E5-LrC"/>
                             <constraint firstItem="iGg-QZ-GSa" firstAttribute="top" secondItem="MVQ-mH-8Lk" secondAttribute="bottom" constant="100" id="qz2-Wh-OkW"/>

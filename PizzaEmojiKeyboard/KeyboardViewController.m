@@ -181,42 +181,6 @@
     return self.imageNames.count;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"SELECTED");
-    UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    pb.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
-    pb.persistent = NO;
-
-    UILabel *notify = [[UILabel alloc] initWithFrame:self.view.frame];
-//    notify.hidden = YES;
-    notify.alpha = 0.0;
-    notify.backgroundColor = [UIColor blackColor];
-
-    notify.text = @"Copied to Clipboard!";
-    notify.textColor = [UIColor whiteColor];
-    notify.textAlignment = NSTextAlignmentCenter;
-
-    [self.view addSubview:notify];
-    [UIView animateWithDuration:0.3 animations:^{
-        notify.alpha = 0.8;
-    } completion:^(BOOL finished) {
-
-
-
-        [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            notify.alpha = 0.0;
-        } completion:^(BOOL finished) {
-            [notify removeFromSuperview];
-        }];
-//        [UIView animateWithDuration:0.75 animations:^{
-//            notify.alpha = 0.0;
-//        } completion:^(BOOL finished) {
-//            [notify removeFromSuperview];
-//        }];
-    }];
-
-}
-
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     KeyboardCollectionViewCell *keyboardCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
@@ -233,6 +197,42 @@
     return keyboardCell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"SELECTED");
+
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+
+    //Uncomment following 3 lines to allow sharing at small size
+//    NSString *targetName = self.imageNames[indexPath.row];
+//    NSString *imageName = [NSString stringWithFormat:@"%@Keyboard", targetName];
+//    pb.image = [UIImage imageNamed:imageName];
+
+    //Comment out following line to disallow sharing full-size images
+    pb.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
+    pb.persistent = NO;
+
+    UILabel *notify = [[UILabel alloc] initWithFrame:self.view.frame];
+//    notify.hidden = YES;
+    notify.alpha = 0.0;
+    notify.backgroundColor = [UIColor blackColor];
+
+    notify.text = @"Copied to Clipboard!";
+    notify.textColor = [UIColor whiteColor];
+    notify.textAlignment = NSTextAlignmentCenter;
+
+    [self.view addSubview:notify];
+    [UIView animateWithDuration:0.3 animations:^{
+        notify.alpha = 0.75;
+    } completion:^(BOOL finished) {
+
+        [UIView animateWithDuration:0.3 delay:0.35 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            notify.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [notify removeFromSuperview];
+        }];
+    }];
+
+}
 
 - (void)textWillChange:(id<UITextInput>)textInput {
     // The app is about to change the document's contents. Perform any preparation here.

@@ -78,6 +78,7 @@
     [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
     [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
          forControlEvents:UIControlEventTouchUpInside];
+    [pizzaButton setShowsTouchWhenHighlighted:YES];
 
     UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
     self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
