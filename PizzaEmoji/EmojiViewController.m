@@ -51,14 +51,37 @@
 -(void)shareContent{
 
     NSString *message = @"#PizzaEmojiApp";
-    UIImage *image = self.emoji;
+    UIImage *image = [self transformImageFromImageView];
+//    UIImage *image = [self takeRoundedScreenShot];
+    NSLog(@"%@", image);
     NSArray *shareItems = @[message, image];
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     [self presentViewController:avc animated:YES completion:nil];
 }
 
+
+- (UIImage *)transformImageFromImageView {
+
+
+    CGSize size = CGSizeApplyAffineTransform(self.emoji.size, CGAffineTransformMakeScale(self.slider.value, self.slider.value));
+    Boolean hasAlpha = false;
+    CGFloat scale = self.slider.value * 0.15;
+    UIGraphicsBeginImageContextWithOptions(size, hasAlpha, scale);
+
+    [self.emoji drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *scaled = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    NSLog(@"%f :: %f", scaled.size.width, scaled.size.height);
+
+    return scaled;
+}
+
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     self.emojiImageView.transform = CGAffineTransformMakeScale(sender.value, sender.value);
+    NSLog(@"%f :: %f", self.emojiImageView.frame.size.width, self.emojiImageView.frame.size.height);
+    NSLog(@"%f :: %f", self.emojiImageView.frame.origin.x, self.emojiImageView.frame.origin.y);
 }
 
 @end

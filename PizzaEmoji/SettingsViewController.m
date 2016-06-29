@@ -94,8 +94,8 @@
 
 -(void)shareContent{
 
-    NSString *message = @"Pizza. Emojis. Enough said.\nhttp://boxscoregames.com\n\n#PizzaEmojiApp";
-    UIImage *image = [UIImage imageNamed:@"cheatday"];
+    NSString *message = @"Pizza. Emojis. Enough said.\nLearn more at boxscoregames.com!\n\n#PizzaEmojiApp";
+    UIImage *image = [UIImage imageNamed:@"sliceaday"];
     NSArray *shareItems = @[message, image];
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     [self presentViewController:avc animated:YES completion:nil];

@@ -34,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    self.view.backgroundColor = [UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1];
+    self.view.backgroundColor = [UIColor whiteColor];
 
     NSURL *localDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0];
     NSLog(@"KEYBOARD ---> %@", localDirectory.absoluteString);
@@ -41,22 +43,15 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
 
     self.imageNames = [NSArray arrayWithObjects:
-                       @"mopizza",
-                       @"pizzapie",
-                       @"sliceaday",
-                       @"pizzatown",
-                       @"pizzaordeath",
-                       @"pizzaparty",
-                       @"cheatday",
-                       @"breakfast",
-                       @"lunch",
-                       @"dinner",
                        @"cheese",
                        @"pepperoni",
                        @"sausage",
                        @"meatlovers",
                        @"veggie",
                        @"deepdish",
+                       @"breakfast",
+                       @"lunch",
+                       @"dinner",
                        @"sunday",
                        @"monday",
                        @"tuesday",
@@ -64,6 +59,13 @@
                        @"thursday",
                        @"friday",
                        @"saturday",
+                       @"cheatday",
+                       @"mopizza",
+                       @"pizzapie",
+                       @"sliceaday",
+                       @"pizzatown",
+                       @"pizzaordeath",
+                       @"pizzaparty",
                        @"toppingbacon",
                        @"toppingblackolives",
                        @"toppingmushrooms",
@@ -73,40 +75,9 @@
                        @"toppingpineapple",
                        @"toppingsausage",
                        @"toppingshrimp",
-                       @"toppingspinach",
+                       @"toppingbasil",
                        @"toppingtomato",
                        nil];
-
-    
-//    @"cheatday",
-//    @"breakfast",
-//    @"lunch",
-//    @"dinner",
-//    @"cheese",
-//    @"pepperoni",
-//    @"sausage",
-//    @"meatlovers",
-//    @"veggie",
-//    @"deepdish",
-//    @"sunday",
-//    @"monday",
-//    @"tuesday",
-//    @"wednesday",
-//    @"thursday",
-//    @"friday",
-//    @"saturday",
-//    @"toppingbacon",
-//    @"toppingblackolives",
-//    @"toppingmushrooms",
-//    @"toppingonions",
-//    @"toppingpepperoni",
-//    @"toppingpeppers",
-//    @"toppingpineapple",
-//    @"toppingsausage",
-//    @"toppingshrimp",
-//    @"toppingspinach",
-//    @"toppingtomato",
-
 
     [self setupGlobalButton];
     [self setupDeleteButton];
@@ -128,9 +99,13 @@
 }
 
 - (void)setupGlobalButton {
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
+    UIImage *globeImage = [UIImage imageNamed:@"globebutton"];
+    CGRect globeFrame = CGRectMake(0, 0, 88, 44);
+
+    self.nextKeyboardButton = [[UIButton alloc] initWithFrame:globeFrame];
+    [self.nextKeyboardButton setBackgroundImage:globeImage forState:UIControlStateNormal];
+
     [self.nextKeyboardButton sizeToFit];
     self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -140,16 +115,21 @@
 
     [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
     [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+
 }
 
 - (void)setupDeleteButton {
-    self.deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIImage *deleteImage = [UIImage imageNamed:@"deletebutton"];
+    CGRect deleteFrame = CGRectMake(0, 0, 88, 44);
 
-    [self.deleteButton setTitle:NSLocalizedString(@"Delete", @"Title for 'Delete' button") forState:UIControlStateNormal];
+    self.deleteButton = [[UIButton alloc] initWithFrame:deleteFrame];
+    [self.deleteButton setBackgroundImage:deleteImage forState:UIControlStateNormal];
+
     [self.deleteButton sizeToFit];
     self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self.deleteButton addTarget:self action:@selector(keyboardViewDidInputDelete) forControlEvents:UIControlEventTouchUpInside];
+
 
     [self.view addSubview:self.deleteButton];
 
@@ -173,12 +153,15 @@
     [super viewDidAppear:animated];
 
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.sectionInset = UIEdgeInsetsMake(0, 10, 10, 0);
+    layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     layout.itemSize = CGSizeMake(60, 60);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 
+
     CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
     self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.showsVerticalScrollIndicator = NO;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -186,8 +169,52 @@
     [self.view addSubview:self.collectionView];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
+
+    self.collectionView.frame = collectionFrame;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.imageNames.count;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"SELECTED");
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+    pb.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
+    pb.persistent = NO;
+
+    UILabel *notify = [[UILabel alloc] initWithFrame:self.view.frame];
+//    notify.hidden = YES;
+    notify.alpha = 0.0;
+    notify.backgroundColor = [UIColor blackColor];
+
+    notify.text = @"Copied to Clipboard!";
+    notify.textColor = [UIColor whiteColor];
+    notify.textAlignment = NSTextAlignmentCenter;
+
+    [self.view addSubview:notify];
+    [UIView animateWithDuration:0.3 animations:^{
+        notify.alpha = 0.8;
+    } completion:^(BOOL finished) {
+
+
+
+        [UIView animateWithDuration:0.3 delay:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            notify.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [notify removeFromSuperview];
+        }];
+//        [UIView animateWithDuration:0.75 animations:^{
+//            notify.alpha = 0.0;
+//        } completion:^(BOOL finished) {
+//            [notify removeFromSuperview];
+//        }];
+    }];
+
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:

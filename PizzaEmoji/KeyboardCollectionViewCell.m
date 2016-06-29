@@ -30,7 +30,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupCell];
+//        [self setupCell];
     }
     return self;
 }

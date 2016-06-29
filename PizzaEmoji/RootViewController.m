@@ -36,22 +36,15 @@
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
 
     emojis = [[NSMutableArray alloc] initWithObjects:
-              [UIImage imageNamed:@"mopizza"],
-              [UIImage imageNamed:@"pizzapie"],
-              [UIImage imageNamed:@"sliceaday"],
-              [UIImage imageNamed:@"pizzatown"],
-              [UIImage imageNamed:@"pizzaordeath"],
-              [UIImage imageNamed:@"pizzaparty"],
-              [UIImage imageNamed:@"cheatday"],
-              [UIImage imageNamed:@"breakfast"],
-              [UIImage imageNamed:@"lunch"],
-              [UIImage imageNamed:@"dinner"],
               [UIImage imageNamed:@"cheese"],
               [UIImage imageNamed:@"pepperoni"],
               [UIImage imageNamed:@"sausage"],
               [UIImage imageNamed:@"meatlovers"],
               [UIImage imageNamed:@"veggie"],
               [UIImage imageNamed:@"deepdish"],
+              [UIImage imageNamed:@"breakfast"],
+              [UIImage imageNamed:@"lunch"],
+              [UIImage imageNamed:@"dinner"],
               [UIImage imageNamed:@"sunday"],
               [UIImage imageNamed:@"monday"],
               [UIImage imageNamed:@"tuesday"],
@@ -59,6 +52,13 @@
               [UIImage imageNamed:@"thursday"],
               [UIImage imageNamed:@"friday"],
               [UIImage imageNamed:@"saturday"],
+              [UIImage imageNamed:@"cheatday"],
+              [UIImage imageNamed:@"mopizza"],
+              [UIImage imageNamed:@"pizzapie"],
+              [UIImage imageNamed:@"sliceaday"],
+              [UIImage imageNamed:@"pizzatown"],
+              [UIImage imageNamed:@"pizzaordeath"],
+              [UIImage imageNamed:@"pizzaparty"],
               [UIImage imageNamed:@"toppingbacon"],
               [UIImage imageNamed:@"toppingblackolives"],
               [UIImage imageNamed:@"toppingmushrooms"],
@@ -68,13 +68,9 @@
               [UIImage imageNamed:@"toppingpineapple"],
               [UIImage imageNamed:@"toppingsausage"],
               [UIImage imageNamed:@"toppingshrimp"],
-              [UIImage imageNamed:@"toppingspinach"],
+              [UIImage imageNamed:@"toppingbasil"],
               [UIImage imageNamed:@"toppingtomato"],
               nil];
-
-    // Set navigation bar to a red color
-//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:207/255.2f green:57/255.2f  blue:39/255.2f  alpha:1]];
-    // Set navigation bar title color to white
 
     UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
     CGRect pizzaFrame = CGRectMake(0, 0, 70, 35);
@@ -82,7 +78,6 @@
     [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
     [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
          forControlEvents:UIControlEventTouchUpInside];
-    [pizzaButton setShowsTouchWhenHighlighted:YES];
 
     UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
     self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
