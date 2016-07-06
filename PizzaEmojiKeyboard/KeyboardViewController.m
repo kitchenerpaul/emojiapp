@@ -121,7 +121,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     if ([self isOpenAccessGranted] == false) {  //  if user doesn't allow access, show our custom keyboard
         
         // Hide Other Keyboard Buttons
@@ -130,19 +130,17 @@
         
         [self initializeKeyboard];
         
-
-        
-        
-//        self.shiftButton.hidden = YES;
-//        self.spaceButton.hidden = YES;
-//        self.globeKey.hidden = YES;
-//        self.returnButton.hidden = YES;
-//        self.oneTwoThreeButton.hidden = YES;
-        
     } else {
         
         // if the User allows access, show collectionview keyboard
-        
+
+        // Hide Other Keyboard Buttons
+        self.shiftButton.hidden = YES;
+        self.spaceButton.hidden = YES;
+        self.globeKey.hidden = YES;
+        self.returnButton.hidden = YES;
+        self.oneTwoThreeButton.hidden = YES;
+
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
         layout.itemSize = CGSizeMake(60, 60);
@@ -346,7 +344,7 @@
         notify.alpha = 0.75;
     } completion:^(BOOL finished) {
 
-        [UIView animateWithDuration:0.3 delay:0.35 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [UIView animateWithDuration:0.3 delay:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
             notify.alpha = 0.0;
         } completion:^(BOOL finished) {
             [notify removeFromSuperview];
