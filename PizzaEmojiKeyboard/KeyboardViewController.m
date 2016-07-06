@@ -116,22 +116,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 
     if ([self isOpenAccessGranted] == false) {  //  if user doesn't allow access, show our custom keyboard
-        
+
         // Hide Other Keyboard Buttons
         self.nextKeyboardButton.hidden = YES;
         self.deleteButton.hidden = YES;
-        
+
         [self initializeKeyboard];
-        
+
     } else {
-        
+
         // if the User allows access, show collectionview keyboard
 
         // Hide Other Keyboard Buttons
@@ -145,7 +140,7 @@
         layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
         layout.itemSize = CGSizeMake(60, 60);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        
+
         CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
         self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
         self.collectionView.showsHorizontalScrollIndicator = NO;
@@ -156,7 +151,14 @@
         [self.collectionView registerClass:[KeyboardCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
         [self.view addSubview:self.collectionView];
     }
+
 }
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+ }
 
 -(void)createdItemsForView {
     //        // Create Exit Button
